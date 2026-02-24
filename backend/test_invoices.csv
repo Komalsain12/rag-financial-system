@@ -1,0 +1,101 @@
+invoice_id,vendor,amount,has_gst,correct_category,correct_decision
+INV-001,Travel Co,9553,True,Travel,Needs Review
+INV-002,Unknown Vendor Ltd,13726,False,Software,Needs Review
+INV-003,City Cafe,4336,False,Equipment,Needs Review
+INV-004,ABC Supplies,12943,True,Software,Needs Review
+INV-005,ABC Supplies,10944,False,Travel,Needs Review
+INV-006,Unknown Vendor Ltd,9919,False,Equipment,Needs Review
+INV-007,City Cafe,11253,False,Equipment,Needs Review
+INV-008,Travel Co,7045,False,Meals,Needs Review
+INV-009,ABC Supplies,3899,True,Travel,Approved
+INV-010,City Cafe,3529,True,Equipment,Approved
+INV-011,Unknown Vendor Ltd,2488,False,Meals,Needs Review
+INV-012,Unknown Vendor Ltd,14087,True,Meals,Needs Review
+INV-013,ABC Supplies,8529,True,Software,Needs Review
+INV-014,City Cafe,910,False,Software,Needs Review
+INV-015,Unknown Vendor Ltd,2382,True,Travel,Approved
+INV-016,ABC Supplies,1300,False,Travel,Needs Review
+INV-017,Travel Co,13447,True,Office Supplies,Needs Review
+INV-018,Travel Co,535,False,Software,Needs Review
+INV-019,ABC Supplies,8569,True,Software,Needs Review
+INV-020,Unknown Vendor Ltd,1794,False,Travel,Needs Review
+INV-021,City Cafe,8723,False,Office Supplies,Needs Review
+INV-022,XYZ Tech,2660,False,Office Supplies,Needs Review
+INV-023,Unknown Vendor Ltd,9646,False,Equipment,Needs Review
+INV-024,Unknown Vendor Ltd,5984,True,Meals,Needs Review
+INV-025,Unknown Vendor Ltd,9719,True,Travel,Needs Review
+INV-026,Travel Co,2026,False,Office Supplies,Needs Review
+INV-027,ABC Supplies,8107,False,Meals,Needs Review
+INV-028,Travel Co,1192,True,Travel,Approved
+INV-029,Unknown Vendor Ltd,14663,True,Office Supplies,Needs Review
+INV-030,XYZ Tech,2601,True,Office Supplies,Approved
+INV-031,XYZ Tech,4704,True,Office Supplies,Approved
+INV-032,ABC Supplies,2696,False,Meals,Needs Review
+INV-033,ABC Supplies,6407,True,Office Supplies,Needs Review
+INV-034,XYZ Tech,11271,False,Travel,Needs Review
+INV-035,Travel Co,5546,True,Office Supplies,Needs Review
+INV-036,City Cafe,2629,True,Meals,Approved
+INV-037,Travel Co,2210,False,Equipment,Needs Review
+INV-038,City Cafe,14703,True,Equipment,Needs Review
+INV-039,Unknown Vendor Ltd,6723,False,Meals,Needs Review
+INV-040,XYZ Tech,11863,False,Equipment,Needs Review
+INV-041,City Cafe,8693,False,Office Supplies,Needs Review
+INV-042,City Cafe,7573,False,Equipment,Needs Review
+INV-043,Travel Co,6141,True,Equipment,Needs Review
+INV-044,Unknown Vendor Ltd,4989,True,Meals,Approved
+INV-045,Unknown Vendor Ltd,14395,True,Travel,Needs Review
+INV-046,City Cafe,11532,False,Equipment,Needs Review
+INV-047,ABC Supplies,9330,False,Software,Needs Review
+INV-048,City Cafe,7319,False,Software,Needs Review
+INV-049,XYZ Tech,325,False,Travel,Needs Review
+INV-050,ABC Supplies,1076,True,Software,Approved
+INV-051,ABC Supplies,7517,True,Software,Needs Review
+INV-052,City Cafe,5296,True,Office Supplies,Needs Review
+INV-053,Travel Co,7281,False,Travel,Needs Review
+INV-054,XYZ Tech,8439,False,Office Supplies,Needs Review
+INV-055,ABC Supplies,10692,True,Equipment,Needs Review
+INV-056,Travel Co,13427,False,Meals,Needs Review
+INV-057,ABC Supplies,14666,True,Office Supplies,Needs Review
+INV-058,XYZ Tech,5410,True,Office Supplies,Needs Review
+INV-059,Travel Co,3666,True,Office Supplies,Approved
+INV-060,XYZ Tech,14404,False,Equipment,Needs Review
+INV-061,Unknown Vendor Ltd,5769,False,Software,Needs Review
+INV-062,Unknown Vendor Ltd,13087,False,Meals,Needs Review
+INV-063,Travel Co,3897,True,Travel,Approved
+INV-064,XYZ Tech,14770,True,Equipment,Needs Review
+INV-065,XYZ Tech,2968,True,Meals,Approved
+INV-066,ABC Supplies,2173,True,Software,Approved
+INV-067,City Cafe,7857,True,Meals,Needs Review
+INV-068,XYZ Tech,2123,False,Travel,Needs Review
+INV-069,Unknown Vendor Ltd,6049,False,Travel,Needs Review
+INV-070,City Cafe,7044,True,Travel,Needs Review
+INV-071,City Cafe,8191,True,Office Supplies,Needs Review
+INV-072,Travel Co,5536,False,Software,Needs Review
+INV-073,ABC Supplies,11182,False,Office Supplies,Needs Review
+INV-074,Travel Co,8024,False,Meals,Needs Review
+INV-075,XYZ Tech,12118,True,Travel,Needs Review
+INV-076,City Cafe,9857,True,Travel,Needs Review
+INV-077,Unknown Vendor Ltd,9795,False,Equipment,Needs Review
+INV-078,Travel Co,3689,False,Equipment,Needs Review
+INV-079,XYZ Tech,4867,False,Travel,Needs Review
+INV-080,ABC Supplies,5964,False,Equipment,Needs Review
+INV-081,Travel Co,14387,False,Software,Needs Review
+INV-082,City Cafe,2288,True,Travel,Approved
+INV-083,City Cafe,14465,False,Office Supplies,Needs Review
+INV-084,Travel Co,6735,True,Office Supplies,Needs Review
+INV-085,Unknown Vendor Ltd,7896,False,Travel,Needs Review
+INV-086,City Cafe,3493,True,Equipment,Approved
+INV-087,XYZ Tech,9317,True,Office Supplies,Needs Review
+INV-088,City Cafe,10718,True,Software,Needs Review
+INV-089,City Cafe,1768,True,Travel,Approved
+INV-090,XYZ Tech,2994,True,Software,Approved
+INV-091,XYZ Tech,7994,False,Travel,Needs Review
+INV-092,City Cafe,4974,True,Meals,Approved
+INV-093,ABC Supplies,13058,False,Software,Needs Review
+INV-094,Unknown Vendor Ltd,4980,True,Travel,Approved
+INV-095,Travel Co,7978,True,Meals,Needs Review
+INV-096,City Cafe,496,True,Office Supplies,Approved
+INV-097,City Cafe,11770,False,Software,Needs Review
+INV-098,Travel Co,11542,False,Meals,Needs Review
+INV-099,Travel Co,3745,False,Equipment,Needs Review
+INV-100,City Cafe,5462,False,Meals,Needs Review
