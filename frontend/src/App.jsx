@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
 import AnalyzePage from './components/AnalyzePage'
 import HistoryPage from './components/HistoryPage'
@@ -7,10 +7,38 @@ import './App.css'
 
 export default function App() {
   const [page, setPage] = useState('dashboard')
-  const [history, setHistory] = useState([])
+
+  // Load history from localStorage on first render
+  const [history, setHistory] = useState(() => {
+    try {
+      const saved = localStorage.getItem('rag_decision_history')
+      return saved ? JSON.parse(saved) : []
+    } catch {
+      return []
+    }
+  })
+
+  // Save to localStorage every time history changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('rag_decision_history', JSON.stringify(history))
+    } catch {
+      console.warn('Could not save to localStorage')
+    }
+  }, [history])
 
   const addToHistory = (entry) => {
-    setHistory(prev => [{ ...entry, id: Date.now(), timestamp: new Date().toLocaleString() }, ...prev])
+    setHistory(prev => [
+      { ...entry, id: Date.now(), timestamp: new Date().toLocaleString() },
+      ...prev
+    ])
+  }
+
+  const clearHistory = () => {
+    if (window.confirm('Clear all history? This cannot be undone.')) {
+      setHistory([])
+      localStorage.removeItem('rag_decision_history')
+    }
   }
 
   return (
@@ -36,6 +64,13 @@ export default function App() {
           </button>
           <button className={`nav-item ${page === 'history' ? 'active' : ''}`} onClick={() => setPage('history')}>
             <span className="nav-icon">◷</span> History
+            {history.length > 0 && (
+              <span style={{
+                marginLeft: 'auto', background: 'rgba(232,184,75,0.2)',
+                color: 'var(--accent)', fontSize: '10px', fontFamily: 'DM Mono, monospace',
+                padding: '2px 6px', borderRadius: '10px'
+              }}>{history.length}</span>
+            )}
           </button>
         </nav>
 
@@ -47,9 +82,9 @@ export default function App() {
 
       <main className="main-content">
         {page === 'dashboard' && <Dashboard history={history} setPage={setPage} />}
-        {page === 'analyze' && <AnalyzePage onResult={addToHistory} />}
-        {page === 'batch' && <BatchPage onResults={(results) => results.forEach(addToHistory)} />}
-        {page === 'history' && <HistoryPage history={history} />}
+        {page === 'analyze'   && <AnalyzePage onResult={addToHistory} />}
+        {page === 'batch'     && <BatchPage onResults={(results) => results.forEach(addToHistory)} />}
+        {page === 'history'   && <HistoryPage history={history} clearHistory={clearHistory} />}
       </main>
     </div>
   )
