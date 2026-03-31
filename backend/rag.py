@@ -1,12 +1,14 @@
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-import json, os
+import json, os, hashlib
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+EMBEDDING_MODEL_NAME = 'all-MiniLM-L6-v2'
+model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
 # File paths to store the index and rules directory on disk
 INDEX_PATH = os.path.join(os.path.dirname(__file__), 'faiss_index.bin')
+INDEX_META_PATH = os.path.join(os.path.dirname(__file__), 'faiss_index_meta.json')
 RULES_DIR = os.path.join(os.path.dirname(__file__), 'rules')
 # Keep old rules_store path as fallback only (will be removed eventually)
 OLD_RULES_PATH = os.path.join(os.path.dirname(__file__), 'rules_store.json')
@@ -36,7 +38,7 @@ def load_rules_from_json_dir() -> list:
                     if isinstance(item, str):
                         chunks.append(item.strip())
                     else:
-                        chunks.append(json.dumps(item))
+                        chunks.append(json.dumps(item, ensure_ascii=False, sort_keys=True))
 
             elif isinstance(data, dict):
                 # Common pattern: { "rules": [ ... ] }
@@ -45,20 +47,10 @@ def load_rules_from_json_dir() -> list:
                         if isinstance(item, str):
                             chunks.append(item.strip())
                         else:
-                            chunks.append(json.dumps(item))
+                            chunks.append(json.dumps(item, ensure_ascii=False, sort_keys=True))
                 else:
-                    # Fall back: collect string values or stringify others
-                    for v in data.values():
-                        if isinstance(v, str):
-                            chunks.append(v.strip())
-                        elif isinstance(v, list):
-                            for item in v:
-                                if isinstance(item, str):
-                                    chunks.append(item.strip())
-                                else:
-                                    chunks.append(json.dumps(item))
-                        else:
-                            chunks.append(json.dumps(v))
+                    # Fall back: store full dict as one retrievable rule chunk
+                    chunks.append(json.dumps(data, ensure_ascii=False, sort_keys=True))
 
             elif isinstance(data, str):
                 chunks.append(data.strip())
@@ -69,6 +61,31 @@ def load_rules_from_json_dir() -> list:
     # Filter out empty lines and comment-like entries
     chunks = [c for c in chunks if c and not c.startswith('#')]
     return chunks
+
+
+def _compute_rules_hash(chunks: list) -> str:
+    payload = "\n<<RULE>>\n".join(chunks)
+    return hashlib.sha256(payload.encode('utf-8')).hexdigest()
+
+
+def _read_index_meta() -> dict:
+    if not os.path.exists(INDEX_META_PATH):
+        return {}
+    try:
+        with open(INDEX_META_PATH, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _write_index_meta(chunks: list):
+    meta = {
+        'rules_hash': _compute_rules_hash(chunks),
+        'rules_count': len(chunks),
+        'embedding_model': EMBEDDING_MODEL_NAME,
+    }
+    with open(INDEX_META_PATH, 'w', encoding='utf-8') as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
 
 
 def build_index_from_rules(chunks: list):
@@ -82,8 +99,54 @@ def build_index_from_rules(chunks: list):
     index.add(embeddings)
 
     faiss.write_index(index, INDEX_PATH)
+    _write_index_meta(chunks)
     print(f"Built FAISS index with {len(chunks)} rules")
     return index
+
+
+def rebuild_index_from_json_rules() -> dict:
+    chunks = load_rules_from_json_dir()
+    if not chunks:
+        return {'ok': False, 'message': 'No JSON rules found', 'rules_count': 0}
+
+    build_index_from_rules(chunks)
+    return {
+        'ok': True,
+        'message': 'FAISS index rebuilt from JSON rules',
+        'rules_count': len(chunks),
+        'rules_hash': _compute_rules_hash(chunks),
+    }
+
+
+def get_rule_index_status() -> dict:
+    chunks = load_rules_from_json_dir()
+    chunk_count = len(chunks)
+    rules_hash = _compute_rules_hash(chunks) if chunks else None
+    meta = _read_index_meta()
+
+    index_exists = os.path.exists(INDEX_PATH)
+    ntotal = None
+    if index_exists:
+        try:
+            ntotal = faiss.read_index(INDEX_PATH).ntotal
+        except Exception:
+            ntotal = None
+
+    meta_matches = (
+        bool(meta)
+        and meta.get('rules_hash') == rules_hash
+        and meta.get('rules_count') == chunk_count
+        and meta.get('embedding_model') == EMBEDDING_MODEL_NAME
+    )
+
+    return {
+        'rules_count': chunk_count,
+        'rules_hash': rules_hash,
+        'index_exists': index_exists,
+        'index_ntotal': ntotal,
+        'index_meta': meta,
+        'needs_rebuild': not (index_exists and ntotal == chunk_count and meta_matches),
+    }
 
 
 def load_knowledge_base(file_path: str):
@@ -125,14 +188,26 @@ def retrieve_relevant_rules(query: str, top_k: int = 5) -> list:
     if not chunks:
         return []
 
-    # Ensure FAISS index exists and matches the number of rules
+    # Ensure FAISS index exists and matches current rule corpus.
     need_rebuild = False
+    current_hash = _compute_rules_hash(chunks)
+    meta = _read_index_meta()
+    meta_matches = (
+        bool(meta)
+        and meta.get('rules_hash') == current_hash
+        and meta.get('rules_count') == len(chunks)
+        and meta.get('embedding_model') == EMBEDDING_MODEL_NAME
+    )
+
     try:
         index = faiss.read_index(INDEX_PATH)
         # some FAISS indices expose ntotal
         if hasattr(index, 'ntotal') and index.ntotal != len(chunks):
             need_rebuild = True
     except Exception:
+        need_rebuild = True
+
+    if not meta_matches:
         need_rebuild = True
 
     if need_rebuild:
@@ -143,7 +218,8 @@ def retrieve_relevant_rules(query: str, top_k: int = 5) -> list:
             return []
 
     # Search
+    top_k = max(1, min(top_k, len(chunks)))
     query_embedding = model.encode([query]).astype('float32')
     distances, indices = index.search(query_embedding, top_k)
 
-    return [chunks[i] for i in indices[0] if i < len(chunks)]
+    return [chunks[i] for i in indices[0] if 0 <= i < len(chunks)]

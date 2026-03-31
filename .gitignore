@@ -7,5 +7,8 @@ uploads/
 *.pyc
 *.pyo
 faiss_index.bin
+faiss_index_meta.json
 rules_store.json
 evaluation_results.csv
+backend/rag_financial.db
+backend/rag_financial.db-journal

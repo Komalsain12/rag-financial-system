@@ -5,10 +5,17 @@ from rag import retrieve_relevant_rules
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url="https://api.groq.com/openai/v1"
-)
+def _get_llm_client() -> OpenAI:
+    api_key = os.getenv("GROQ_API_KEY") or os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "Missing GROQ_API_KEY in environment. Add it to .env before analyzing documents."
+        )
+
+    return OpenAI(
+        api_key=api_key,
+        base_url="https://api.groq.com/openai/v1"
+    )
 
 SYSTEM_PROMPT = """You are a senior financial compliance officer and chartered accountant 
 with 20 years of experience in Indian corporate finance, GST regulations, and expense management.
@@ -198,6 +205,7 @@ RESPOND ONLY with this JSON — no markdown, no backticks, no extra text before 
   "reasoning": "<exactly 7-8 professional sentences covering: document summary, verified fields, missing fields, applicable rule, GST compliance, risk level reasoning, decision justification, next action>"
 }}"""
 
+    client = _get_llm_client()
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
