@@ -1,0 +1,440 @@
+{
+  "_metadata": {
+    "dataset_name": "CGST Input Tax Credit (ITC) Rules — Comprehensive",
+    "source_authority": "Central Board of Indirect Taxes and Customs (CBIC)",
+    "governing_act": "Central Goods and Services Tax Act, 2017",
+    "governing_rules": "CGST Rules 2017 — Chapter V (Rules 36–45); CGST Act Sections 16–21",
+    "official_url": "https://cbic-gst.gov.in",
+    "last_amended": "Notification No. 20/2024-Central Tax dated 08.10.2024; Finance Act 2023 (CSR amendment to Section 17(5))",
+    "version": "2.0",
+    "schema_version": "1.0",
+    "total_rules": 20,
+    "tags": ["GST", "ITC", "input tax credit", "CGST", "Chapter V", "India", "CBIC"]
+  },
+  "rules": [
+    {
+      "rule_id": "ITC-ACT-001",
+      "rule_code": "CGST Act Section 16(1)",
+      "title": "Entitlement to Claim Input Tax Credit",
+      "category": "ITC Eligibility — Basic",
+      "description": "Every registered person is entitled to take credit of input tax charged on any supply of goods or services or both to him which is used or intended to be used in the course or furtherance of business, credited to the electronic credit ledger.",
+      "key_principles": [
+        "'In the course or furtherance of business' is the fundamental test for ITC eligibility",
+        "ITC is available even if goods/services are 'intended to be used' — not just actually used",
+        "Credit is credited to the Electronic Credit Ledger (ECL) maintained on the GST portal",
+        "ITC can only be utilised to discharge output tax liability as per the order of utilisation under Section 49 of CGST Act"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC entitlement", "business purpose", "electronic credit ledger", "Section 16(1)"]
+    },
+    {
+      "rule_id": "ITC-ACT-002",
+      "rule_code": "CGST Act Section 16(2)",
+      "title": "Conditions for Claiming ITC — All Must Be Satisfied",
+      "category": "ITC Conditions — Mandatory",
+      "description": "A registered person is entitled to ITC on an inward supply ONLY if ALL of the following conditions are simultaneously satisfied. These are overriding conditions ('Notwithstanding' language in Section 16).",
+      "conditions": [
+        "(a) Must be in possession of a tax invoice / debit note issued by a registered supplier OR other documents prescribed under Rule 36",
+        "(b) Must have received the goods or services or both — for goods delivered in instalments, ITC available only on last instalment",
+        "(c) Tax actually charged on such supply has been paid by the supplier to the Government, either in cash or by utilisation of ITC",
+        "(d) Must have furnished the return under Section 39 (GSTR-3B) for the relevant tax period",
+        "Second Proviso: If payment is not made to the supplier within 180 days of the invoice date, ITC availed must be reversed (added to output tax liability along with interest) and may be re-availed once payment is made",
+        "Third Proviso (added via Finance Act 2022): Section 16(2)(aa) — ITC can be availed only if the details of invoice/debit note have been furnished by the supplier in GSTR-1 and appear in recipient's GSTR-2B"
+      ],
+      "180_day_reversal": {
+        "trigger": "Failure to pay supplier within 180 days from invoice date",
+        "action": "ITC must be reversed by adding to output tax liability in GSTR-3B",
+        "interest": "Interest applicable under Section 50 from date of ITC claim",
+        "re_availment": "ITC may be re-availed once payment is made; re-availment not time-barred under Section 16(4)"
+      },
+      "effective_date": "01-07-2017",
+      "last_amended": "01-10-2022",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC conditions", "Section 16(2)", "GSTR-2B", "180 days", "payment reversal", "tax paid", "goods received"]
+    },
+    {
+      "rule_id": "ITC-ACT-003",
+      "rule_code": "CGST Act Section 16(4)",
+      "title": "Time Limit for Claiming ITC",
+      "category": "ITC Time Limit",
+      "description": "ITC in respect of any invoice or debit note cannot be claimed after the earlier of the following: (a) November 30 following the end of the financial year to which such invoice/debit note relates, or (b) date of furnishing of the relevant annual return.",
+      "conditions": [
+        "Time limit: earlier of 30 November following end of FY or date of filing annual return",
+        "Example: ITC on an invoice for FY 2024-25 can be claimed up to 30 November 2025 or date of GSTR-9 filing, whichever is earlier",
+        "Exception (as amended by Finance Act 2022): Time limit of Section 16(4) does NOT apply to re-availment of ITC reversed due to non-payment under the second proviso to Section 16(2) — this can be re-availed at any time after payment",
+        "Amended from 'September 30' to 'November 30' by Finance Act 2022 (effective 01.10.2022)",
+        "ITC in respect of new registrations and deemed registrations is subject to separate time limits"
+      ],
+      "effective_date": "01-07-2017",
+      "last_amended": "01-10-2022",
+      "amendment_ref": "Finance Act 2022 — changed 'September 30' to 'November 30'",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC time limit", "November 30", "Section 16(4)", "annual return", "financial year"]
+    },
+    {
+      "rule_id": "ITC-ACT-004",
+      "rule_code": "CGST Act Section 17(1) & (2)",
+      "title": "Apportionment of ITC — Business vs Non-Business Use",
+      "category": "ITC Apportionment",
+      "description": "Where goods or services are used partly for business and partly for other (personal/non-business) purposes, ITC shall be restricted to the portion attributable to business use.",
+      "conditions": [
+        "ITC = (Business Use Proportion) × Total Input Tax Charged",
+        "Non-business use portion is ineligible — must be reversed",
+        "Similarly, where goods/services used partly for taxable (incl. zero-rated) and partly for exempt supplies, ITC restricted to portion attributable to taxable supplies",
+        "Method of calculation: Rule 42 for inputs/input services; Rule 43 for capital goods",
+        "Proportionate reversal to be done monthly (provisional) and finalised by September 30 of following FY"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC apportionment", "business use", "personal use", "taxable supply", "exempt supply", "Rule 42", "Rule 43", "Section 17"]
+    },
+    {
+      "rule_id": "ITC-ACT-005",
+      "rule_code": "CGST Act Section 17(5)",
+      "title": "Blocked Credits — ITC Not Available",
+      "category": "Blocked ITC",
+      "description": "ITC is absolutely blocked (not available) for the following categories of goods and services, regardless of their use in business.",
+      "blocked_categories": [
+        "(a)(i) Motor vehicles for transportation of persons having approved seating capacity of not more than 13 persons (including driver) — EXCEPT when used for: (A) making taxable supply of such vehicles; (B) transportation of passengers; (C) imparting training on driving; or (D) used as transport vehicle in further supply",
+        "(a)(ii) Vessels and aircraft — EXCEPT when used for making a taxable supply of such vessel/aircraft, transportation of goods/passengers, or training",
+        "(ab) Services of general insurance, servicing, repair and maintenance in so far as they relate to motor vehicles, vessels or aircraft referred to in (a) — EXCEPT if such vehicles used for exempt/taxable purpose above",
+        "(b) Food and beverages, outdoor catering, beauty treatment, health services, cosmetic and plastic surgery, leasing/renting/hiring of motor vehicles (for personal use), life insurance, health insurance — EXCEPT where the registered person is in the business of making such supply or where it is obligatory under law",
+        "(c) Works contract services for construction of an immovable property (other than plant and machinery) — EXCEPT where it is an input service for further supply of works contract",
+        "(d) Goods or services received for construction of immovable property on own account even if capitalised in books — EXCEPT plant and machinery",
+        "(e) Goods or services used for personal consumption",
+        "(f) Goods lost, stolen, destroyed, written off or disposed of by way of gift or free samples",
+        "(g) Tax paid under Section 74 (fraud, suppression), Section 129 (detention/release of goods) or Section 130 (confiscation) — ITC not available on such tax payments",
+        "(h) CSR expenditure under Section 135 of Companies Act 2013 — ITC blocked w.e.f. 01-10-2023 (Finance Act 2023 amendment)"
+      ],
+      "plant_and_machinery_exception": "Plant and machinery means apparatus, equipment, and machinery fixed to earth by foundation or structural support — EXCLUDES land, building, civil structures, telecommunication towers, pipelines laid outside factory premises",
+      "effective_date": "01-07-2017",
+      "last_amended": "01-10-2023",
+      "amendment_ref": "Finance Act 2023 — CSR ITC blocked under Section 17(5); Finance Act 2021 — motor vehicle changes",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["blocked ITC", "Section 17(5)", "motor vehicle", "food", "works contract", "immovable property", "personal use", "gift", "CSR", "life insurance"]
+    },
+    {
+      "rule_id": "ITC-RULE-001",
+      "rule_code": "CGST Rule 36(1)",
+      "title": "Documents Valid for Claiming ITC",
+      "category": "ITC Document Requirements",
+      "description": "Input tax credit can only be availed on the basis of specified documents as prescribed under Rule 36(1).",
+      "valid_documents": [
+        "(a) A tax invoice issued under Section 31 by a registered supplier",
+        "(b) An invoice issued by an unregistered supplier (self-invoice) under Section 31(3)(f) — for RCM supplies",
+        "(c) A debit note issued under Section 34 by a registered supplier",
+        "(d) A bill of entry or any similar document prescribed under Customs Act or Customs Tariff Act — for import of goods",
+        "(e) ISD invoice or ISD credit note issued under Rule 54(1A) — for ISD distributions",
+        "(f) Any document in lieu of invoice for banking companies, NBFCs, financial institutions under Rule 54(1) — subject to conditions",
+        "Revised tax invoice under Rule 53"
+      ],
+      "key_conditions": [
+        "The document must be a valid document at the time of claiming ITC",
+        "Recipient must verify that the document number, GSTIN, and tax amount match the inward supply",
+        "ITC cannot be availed on proforma invoices, purchase orders, or documents that are not prescribed above"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC documents", "tax invoice", "self-invoice", "debit note", "bill of entry", "ISD invoice", "Rule 36(1)"]
+    },
+    {
+      "rule_id": "ITC-RULE-002",
+      "rule_code": "CGST Rule 36(4)",
+      "title": "ITC Restricted to GSTR-2B — No Provisional ITC",
+      "category": "ITC GSTR-2B Linkage",
+      "description": "With effect from 01.01.2022, a registered person can avail ITC only if the details of the invoice/debit note have been furnished by the supplier in GSTR-1 (or IFF) and appear in the recipient's GSTR-2B. Provisional ITC is no longer available.",
+      "conditions": [
+        "ITC can only be claimed if the invoice/debit note appears in the recipient's GSTR-2B for that tax period or any prior tax period",
+        "If supplier has not filed GSTR-1 or the invoice is not reported, ITC cannot be claimed by the recipient (even if the invoice is valid)",
+        "History: From 09.10.2019 to 31.12.2019: 20% provisional ITC allowed; from 01.01.2020 to 31.12.2021: 10% provisional ITC allowed; from 01.01.2022: 0% — all ITC must appear in GSTR-2B",
+        "Exception: ITC from ISD distributions, import ITC (bill of entry), and ITC on reverse charge are not subject to GSTR-2B restriction (these appear via separate mechanisms)",
+        "GSTR-1A (amendment): ITC may be availed on amended invoices after supplier files GSTR-1A — credit flows into subsequent GSTR-2B"
+      ],
+      "effective_date": "01-01-2022",
+      "amendment_ref": "Notification No. 40/2021-Central Tax dated 29.12.2021",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["GSTR-2B", "provisional ITC", "Rule 36(4)", "supplier GSTR-1", "no provisional credit", "ITC reconciliation"]
+    },
+    {
+      "rule_id": "ITC-RULE-003",
+      "rule_code": "CGST Rule 37",
+      "title": "Reversal of ITC on Non-Payment of Consideration to Supplier (180 Days)",
+      "category": "ITC Reversal — Non-Payment",
+      "description": "If a registered person fails to pay to the supplier the value of supply along with tax within 180 days from the date of the invoice, the ITC claimed must be reversed.",
+      "conditions": [
+        "If the recipient does not pay the invoice value (including GST) to the supplier within 180 days from the invoice date, ITC availed on that invoice must be reversed",
+        "Reversal = ITC availed proportionate to unpaid amount",
+        "Reversal to be made by adding to output tax liability in GSTR-3B along with interest under Section 50",
+        "Interest runs from the date ITC was originally availed",
+        "Once payment is made (even after 180 days), the ITC can be re-availed",
+        "Reversal to be reported in GSTR-3B, Table 4(B)(2) as reversal due to Rule 37",
+        "This provision does NOT apply to Section 16(2) re-availment — once paid, ITC is re-claimable without time limit",
+        "For composition dealers: not applicable (they don't avail ITC)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["180 days", "ITC reversal", "non-payment", "Rule 37", "GSTR-3B reversal", "interest Section 50"]
+    },
+    {
+      "rule_id": "ITC-RULE-004",
+      "rule_code": "CGST Rule 37A",
+      "title": "ITC Reversal When Supplier Does Not File GSTR-3B",
+      "category": "ITC Reversal — Supplier Non-Filing",
+      "description": "Inserted w.e.f. 26.12.2022. If a supplier has furnished invoice details in GSTR-1 but has not filed GSTR-3B (i.e., not paid tax) by September 30 of the following financial year, the recipient must reverse the ITC availed on such invoices.",
+      "conditions": [
+        "Trigger: Supplier has reported invoice in GSTR-1/IFF but has not filed GSTR-3B by 30 September of the year following the financial year in which invoice was issued",
+        "Reversal deadline: The recipient must reverse the ITC by filing GSTR-3B on or before 30 November of that year",
+        "Reversal amount: Full ITC availed on all such invoices of the non-filing supplier",
+        "Interest applicable on reversed amount from original date of ITC availment under Section 50",
+        "Re-availment: Once the supplier files GSTR-3B and tax is paid, the recipient may re-avail the reversed ITC in GSTR-3B for any subsequent tax period — no time restriction on re-availment"
+      ],
+      "effective_date": "26-12-2022",
+      "amendment_ref": "Notification No. 26/2022-Central Tax dated 26.12.2022",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 37A", "ITC reversal", "supplier non-filing", "GSTR-3B", "September 30", "November 30", "re-availment"]
+    },
+    {
+      "rule_id": "ITC-RULE-005",
+      "rule_code": "CGST Rule 38",
+      "title": "ITC for Banking Companies and Financial Institutions",
+      "category": "ITC — Banking/NBFC",
+      "description": "Banking companies, financial institutions, and NBFCs that opt not to comply with Section 17(2) proportionate ITC rules may follow the special procedure under Rule 38.",
+      "conditions": [
+        "Such entities may avail 50% of eligible ITC each month on a self-assessment basis",
+        "The remaining 50% is not available",
+        "This is an option available in lieu of proportionate allocation under Rules 42 and 43",
+        "ITC on goods and services exclusively used for non-business/exempt purposes is still not available",
+        "ITC on inputs to capital goods used exclusively for business is available in full",
+        "The 50% restriction applies to common/mixed use inputs only",
+        "ITC availed must be credited to Electronic Credit Ledger under Section 41"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["banking ITC", "NBFC", "50% ITC", "Rule 38", "financial institution", "special ITC rule"]
+    },
+    {
+      "rule_id": "ITC-RULE-006",
+      "rule_code": "CGST Rule 39",
+      "title": "Procedure for Distribution of ITC by Input Service Distributor (ISD)",
+      "category": "ISD ITC Distribution",
+      "description": "The ISD must distribute eligible ITC to its recipient units in the same month it receives the credit, following the prescribed procedure.",
+      "conditions": [
+        "(a) ITC available for distribution must be distributed in the same month it is received",
+        "(b) Eligible and ineligible ITC must be distributed separately",
+        "(c) IGST, CGST, SGST/UTGST credits must be distributed separately",
+        "(d) ITC available for distribution to a recipient = (Turnover of that recipient / Total turnover of all recipients in a State) × ITC to be distributed",
+        "(e) If a recipient has no turnover in the relevant period, their share is pro-rated from other recipients",
+        "(f) ISD cannot distribute more ITC than it has received",
+        "(g) ISD distribution reported in FORM GSTR-6 for each month",
+        "(h) ISD credit note for reversal where excess ITC was distributed",
+        "From 01-04-2025: Finance Act 2024 expanded ISD scope to cover inter-branch ITC on all input services (not just common services)"
+      ],
+      "effective_date": "01-07-2017",
+      "last_amended": "01-04-2025",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ISD", "ITC distribution", "GSTR-6", "turnover ratio", "Rule 39", "same month", "IGST CGST SGST separation"]
+    },
+    {
+      "rule_id": "ITC-RULE-007",
+      "rule_code": "CGST Rule 40",
+      "title": "ITC in Special Circumstances — New Registration, Voluntary Registration, Conversion from Composition",
+      "category": "ITC — Special Circumstances",
+      "description": "ITC available to a registered person who migrates from non-registration to registration, or from composition to regular scheme, in respect of goods held in stock and capital goods.",
+      "conditions": [
+        "New registration under Section 25(1): ITC on inputs held in stock/semi-finished/finished goods on date immediately before registration date — claim within 30 days of registration in FORM GSTR ITC-01",
+        "Voluntary registration: Same as new registration — inputs held in stock",
+        "Conversion from composition to regular: ITC on inputs in stock, semi-finished/finished goods, AND capital goods (net of 5% per quarter reduction) on date immediately preceding changeover date — claim in FORM GSTR ITC-01 within 30 days",
+        "Exempt supply to taxable supply: ITC on inputs/capital goods exclusively used for exempted supply now becoming taxable — claim within 1 year from invoice date",
+        "Capital goods ITC on composition-to-regular: reduced by 5% per quarter (or part of quarter) from original invoice date"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["new registration ITC", "composition to regular", "GSTR ITC-01", "Rule 40", "stock ITC", "capital goods", "30 days"]
+    },
+    {
+      "rule_id": "ITC-RULE-008",
+      "rule_code": "CGST Rule 41",
+      "title": "Transfer of ITC on Sale, Merger, Amalgamation, Demerger, or Transfer of Business",
+      "category": "ITC Transfer — Business Change",
+      "description": "Upon sale, merger, demerger, amalgamation, lease or transfer of business, the unutilised ITC in the Electronic Credit Ledger may be transferred to the transferee.",
+      "conditions": [
+        "Transferor must file FORM GSTR ITC-02 electronically on GST portal with request to transfer unused ITC",
+        "In case of demerger: ITC to be apportioned in ratio of the value of assets of the new units as per demerger scheme",
+        "The transferor must attach a certificate from a Practicing CA or Cost Accountant certifying that the sale/merger/demerger has been done with specific provision for transfer of liabilities",
+        "GSTIN of both transferor and transferee must be in the same PAN — ITC cannot be transferred cross-PAN",
+        "Transferee's ECL will be credited after the transferor's GSTR ITC-02 is accepted",
+        "Unused CGST can only go to transferee's CGST credit; SGST to SGST; IGST to IGST"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC transfer", "merger", "amalgamation", "demerger", "business transfer", "GSTR ITC-02", "CA certificate", "Rule 41"]
+    },
+    {
+      "rule_id": "ITC-RULE-009",
+      "rule_code": "CGST Rule 42",
+      "title": "ITC Apportionment — Inputs/Input Services (Taxable + Exempt Supplies)",
+      "category": "ITC Reversal — Exempt Supplies",
+      "description": "Where inputs or input services are used for both taxable (including zero-rated) and exempt supplies, ITC attributable to exempt supplies must be reversed using the formula in Rule 42.",
+      "procedure": [
+        "Step 1: Identify inputs/input services exclusively used for taxable supplies (T1) — full ITC available",
+        "Step 2: Identify inputs/input services exclusively used for exempt supplies (T2) — ITC fully reversed",
+        "Step 3: Identify inputs/input services exclusively used for non-business purposes (T3) — ITC fully reversed",
+        "Step 4: Calculate Common Credit (C2) = Total ITC less T1, T2, T3, and inputs on which ITC is blocked under Section 17(5)",
+        "Step 5: ITC attributable to exempt supplies (D1) = (Aggregate exempt turnover / Total turnover in State) × C2",
+        "Step 6: ITC attributable to non-business use (D2) = 5% of C2",
+        "Step 7: Eligible common ITC (C3) = C2 - D1 - D2",
+        "Monthly: Reverse D1 + D2 provisionally in GSTR-3B",
+        "Annual Finalisation: D1 and D2 to be finalised by September 30 following end of FY based on actual annual figures; adjustment for difference between provisional and final"
+      ],
+      "interest_on_short_reversal": "If actual annual reversal exceeds provisional reversals, excess must be added to output tax liability with interest under Section 50 from 1 April of the following FY",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 42", "ITC apportionment", "exempt supply reversal", "D1", "D2", "C2", "common credit", "September 30 annual", "taxable turnover ratio"]
+    },
+    {
+      "rule_id": "ITC-RULE-010",
+      "rule_code": "CGST Rule 43",
+      "title": "ITC Apportionment — Capital Goods (Taxable + Exempt Supplies)",
+      "category": "ITC Reversal — Capital Goods",
+      "description": "Where capital goods are used for both taxable and exempt supplies, or for both business and non-business purposes, ITC on capital goods must be apportioned using Rule 43.",
+      "procedure": [
+        "Capital goods exclusively used for exempt supplies or non-business purposes: FULL ITC reversal",
+        "Capital goods exclusively used for taxable (incl. zero-rated) supplies: FULL ITC available",
+        "Capital goods used for both taxable and exempt (common use):",
+        " — Total ITC on common capital goods = Tc",
+        " — Amount attributable to 1 month = Tc / 60 (ITC is spread over 60 months/5 years assumed useful life)",
+        " — Monthly reversal = (Tc / 60) × (Exempt turnover of month / Total turnover of month)",
+        " — Amounts to be accumulated monthly and finalised by September 30 of following FY",
+        "Subsequent sale of capital goods: ITC reversal required = Higher of: (a) ITC taken on capital goods less 5% per quarter (proportionate to quarters used); or (b) Tax on transaction value of capital goods at time of sale"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 43", "capital goods ITC", "5 year spread", "60 months", "exempt proportion", "capital goods sale reversal"]
+    },
+    {
+      "rule_id": "ITC-RULE-011",
+      "rule_code": "CGST Rule 44",
+      "title": "Reversal of ITC in Special Circumstances",
+      "category": "ITC Reversal — Special",
+      "description": "ITC must be reversed in certain specific circumstances including cancellation of registration, goods destroyed/lost, composition scheme migration, or supply becoming exempt.",
+      "circumstances_and_reversal": [
+        {
+          "circumstance": "Cancellation of registration",
+          "reversal_rule": "ITC on inputs in stock, semi-finished/finished goods, and capital goods must be reversed — higher of: ITC on such goods OR output tax on transaction value; reversal in final GSTR-3B or GSTR-10 (final return)"
+        },
+        {
+          "circumstance": "Switching to composition scheme",
+          "reversal_rule": "ITC on inputs in stock, semi-finished goods, finished goods, and capital goods (net of 5% per quarter) on date of changeover must be reversed; in FORM GSTR ITC-03 within 60 days"
+        },
+        {
+          "circumstance": "Supply becoming exempt",
+          "reversal_rule": "ITC on inputs held in stock attributable to the newly exempted supply must be reversed"
+        },
+        {
+          "circumstance": "Goods lost, stolen, destroyed, written off, gifted, or given as free samples",
+          "reversal_rule": "Full ITC on such goods must be reversed as per Section 17(5)(f)"
+        },
+        {
+          "circumstance": "Capital goods sold",
+          "reversal_rule": "ITC reversal as per Rule 43 methodology — higher of reduced ITC or tax on transaction value"
+        }
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC reversal", "Rule 44", "cancellation of registration", "composition migration", "goods destroyed", "free sample", "capital goods sale", "GSTR ITC-03"]
+    },
+    {
+      "rule_id": "ITC-RULE-012",
+      "rule_code": "CGST Rule 44A",
+      "title": "Reversal of ITC — Additional Customs Duties (CVD/SAD) Under Legacy Law",
+      "category": "ITC Reversal — Legacy Customs Duties",
+      "description": "Rule 44A specifies the manner of reversal of ITC in respect of Input Tax Credits of Additional Duties of Customs (CVD) and Special Additional Duty (SAD) which were transitioned under the TRAN provisions.",
+      "conditions": [
+        "Applicable to stock of imported goods held at the time of GST transition on which CVD/SAD was paid and transitioned as ITC",
+        "Where such goods are subsequently supplied as exempt goods, the transitional ITC must be reversed proportionately",
+        "Calculated as: ITC to be reversed = (Exempt supply value / Total supply value) × Transitioned CVD/SAD credit"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 44A", "additional customs duty", "CVD", "SAD", "transitional ITC", "legacy credits"]
+    },
+    {
+      "rule_id": "ITC-RULE-013",
+      "rule_code": "CGST Rule 45",
+      "title": "Conditions and Restrictions for Job Work ITC",
+      "category": "ITC — Job Work",
+      "description": "A registered person (principal) sending inputs or capital goods to a job worker can avail ITC on such goods subject to conditions under Rule 45.",
+      "conditions": [
+        "Principal must maintain details of challans for goods sent to job worker",
+        "Details of goods sent to job worker must be declared in GSTR-1 (Table 9B) for each quarter",
+        "ITC on goods sent for job work: available to principal even though goods are not at principal's premises",
+        "Inputs to be returned within 1 year from date of sending to job worker (or removed to place of business/supply directly from job worker's premises)",
+        "Capital goods to be returned within 3 years from date of sending",
+        "If goods not returned within prescribed time: they are deemed to be supplied by principal on the date of sending — GST liability arises",
+        "Principal can supply goods directly from job worker's premises if job worker's premises are declared as additional place of business",
+        "Moulds, dies, jigs, fixtures, and tools sent to job worker: no such time limit applies"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 45", "job work", "ITC job work", "principal", "inputs 1 year", "capital goods 3 years", "moulds", "deemed supply"]
+    },
+    {
+      "rule_id": "ITC-RULE-014",
+      "rule_code": "CGST Act Section 49 — ITC Utilisation Order",
+      "title": "Order of Utilisation of Input Tax Credit",
+      "category": "ITC Utilisation",
+      "description": "ITC must be utilised in a prescribed order to discharge output tax liability. Cross-utilisation rules apply.",
+      "utilisation_order": [
+        "IGST credit can be used to pay: IGST first, then CGST, then SGST/UTGST (in any order)",
+        "CGST credit can be used to pay: CGST first, then IGST; CANNOT be used for SGST/UTGST",
+        "SGST/UTGST credit can be used to pay: SGST/UTGST first, then IGST; CANNOT be used for CGST",
+        "ITC must be fully exhausted before cash payment is made for the corresponding tax head",
+        "Cess credit can only be used to pay Cess; cannot be used for CGST, SGST, or IGST"
+      ],
+      "electronic_ledger_types": [
+        "Electronic Credit Ledger (ECL) — holds ITC",
+        "Electronic Cash Ledger — holds cash deposited",
+        "Electronic Liability Ledger — holds tax demand payable"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC utilisation", "Section 49", "IGST credit", "CGST credit", "SGST credit", "cross utilisation", "electronic ledger", "Cess"]
+    },
+    {
+      "rule_id": "ITC-RULE-015",
+      "rule_code": "CGST Act Section 16(2)(aa) + Rule 36(4)",
+      "title": "ITC Linked to GSTR-2B — Mandatory Reconciliation",
+      "category": "ITC Reconciliation",
+      "description": "From 01.01.2022, ITC claims must be supported by GSTR-2B. Registered persons must reconcile their purchase register with GSTR-2B before claiming ITC.",
+      "reconciliation_process": [
+        "Step 1: Download GSTR-2B for the month from GST portal",
+        "Step 2: Match invoices in purchase register with invoices in GSTR-2B",
+        "Step 3: For invoices in purchase register but NOT in GSTR-2B — ITC cannot be claimed; follow up with supplier to file/amend GSTR-1",
+        "Step 4: For invoices in GSTR-2B but not in purchase register — verify genuineness of supply and document",
+        "Step 5: Claim only the ITC that appears in GSTR-2B",
+        "Step 6: Report mismatches in GSTR-3B Table 4 with appropriate coding (4D — ITC not available)"
+      ],
+      "gstr2b_auto_population": "GSTR-2B is auto-populated on the 14th of each month based on suppliers' GSTR-1/GSTR-1A filed by the 13th. It is a static statement for each month — unlike GSTR-2A which updates dynamically.",
+      "effective_date": "01-01-2022",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["GSTR-2B", "ITC reconciliation", "purchase register", "Rule 36(4)", "Table 4 GSTR-3B", "14th of month"]
+    },
+    {
+      "rule_id": "ITC-RULE-016",
+      "rule_code": "CGST Act Section 18(6) read with Rule 44",
+      "title": "ITC Reversal on Sale of Capital Goods",
+      "category": "ITC — Capital Goods Sale",
+      "description": "When a registered person sells capital goods on which ITC has been availed, the ITC must be reversed computed as the higher of two amounts.",
+      "reversal_formula": {
+        "amount_a": "ITC availed on capital goods less 5% per quarter (or part of quarter) of usage",
+        "amount_b": "GST payable on the transaction value (selling price) of the capital goods",
+        "reversal_amount": "Higher of Amount A or Amount B",
+        "example": "Machine purchased for Rs. 10L, GST paid = Rs. 1.8L (18%). Used for 6 quarters. Amount A = 1,80,000 - (1,80,000 × 5% × 6) = 1,80,000 - 54,000 = Rs. 1,26,000. Sold for Rs. 7.5L, GST on transaction value = 7,50,000 × 18% = Rs. 1,35,000. Reversal = Higher of Rs. 1,26,000 or Rs. 1,35,000 = Rs. 1,35,000"
+      },
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["capital goods sale", "ITC reversal", "5% per quarter", "transaction value", "Section 18(6)", "Rule 44"]
+    }
+  ]
+}

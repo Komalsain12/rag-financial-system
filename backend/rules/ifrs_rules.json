@@ -1,0 +1,671 @@
+{
+  "_metadata": {
+    "dataset_name": "IFRS — Core Accounting Principles and Audit & Compliance Rules (Comprehensive)",
+    "source_authority": "International Accounting Standards Board (IASB) / IFRS Foundation",
+    "governing_documents": [
+      "Conceptual Framework for Financial Reporting (Revised March 2018)",
+      "IAS 1 — Presentation of Financial Statements (amended 2007, latest effective 01-01-2024)",
+      "IAS 2 — Inventories (revised 2003)",
+      "IAS 7 — Statement of Cash Flows (amended 2016)",
+      "IAS 8 — Accounting Policies, Changes in Accounting Estimates and Errors (revised 2021)",
+      "IAS 10 — Events After the Reporting Period (amended 2003)",
+      "IAS 16 — Property, Plant and Equipment (revised 2003)",
+      "IAS 24 — Related Party Disclosures (revised 2009)",
+      "IAS 36 — Impairment of Assets (revised 2004)",
+      "IAS 37 — Provisions, Contingent Liabilities and Contingent Assets (1998)",
+      "IAS 38 — Intangible Assets (revised 2004)",
+      "IFRS 9 — Financial Instruments (2014, effective 01-01-2018)",
+      "IFRS 15 — Revenue from Contracts with Customers (2014, effective 01-01-2018)",
+      "IFRS 16 — Leases (2016, effective 01-01-2019)"
+    ],
+    "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/",
+    "note": "All rules extracted from IASB-published summaries and Conceptual Framework 2018 available at ifrs.org. For full authoritative text, refer to IFRS Foundation publications.",
+    "version": "2.0",
+    "schema_version": "1.0",
+    "total_rules": 35,
+    "tags": ["IFRS", "IASB", "IAS", "accounting principles", "financial reporting", "audit", "compliance", "global"]
+  },
+  "rules": [
+    {
+      "rule_id": "IFRS-CF-001",
+      "rule_code": "CF 2018 — Chapter 1",
+      "title": "Objective of General Purpose Financial Reporting",
+      "category": "Conceptual Framework — Objective",
+      "description": "The objective is to provide financial information about the reporting entity that is useful to existing and potential investors, lenders, and other creditors in making decisions about providing resources to the entity.",
+      "key_principles": [
+        "Primary users are existing/potential investors, lenders, and other creditors",
+        "Information needed: economic resources, claims against the entity, changes in resources and claims",
+        "Information about management's stewardship of resources must also be provided",
+        "Financial reports cannot provide all the information users need — they must also consider information from other sources",
+        "General purpose financial reports are not designed to show the value of the entity — only to provide information to help users estimate the value"
+      ],
+      "source": "IFRS Conceptual Framework, Chapter 1, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["objective", "primary users", "investors", "lenders", "stewardship", "economic resources", "CF Chapter 1"]
+    },
+    {
+      "rule_id": "IFRS-CF-002",
+      "rule_code": "CF 2018 — Chapter 2: Fundamental Characteristics",
+      "title": "Fundamental Qualitative Characteristics: Relevance and Faithful Representation",
+      "category": "Conceptual Framework — Qualitative Characteristics",
+      "description": "The two fundamental qualitative characteristics that make financial information useful are Relevance and Faithful Representation.",
+      "relevance": {
+        "definition": "Information is relevant if it is capable of making a difference in the decisions of users — it has predictive value, confirmatory value, or both",
+        "materiality": "Information is material if omitting it, misstating it, or obscuring it could reasonably be expected to influence decisions of the primary users of that specific entity's financial statements. Materiality is an entity-specific aspect of relevance.",
+        "threshold": "No universal materiality threshold exists — judgement required based on nature and magnitude relative to the entity's financial statements"
+      },
+      "faithful_representation": {
+        "definition": "Information faithfully represents the phenomena it purports to represent",
+        "three_characteristics": [
+          "Complete: all information necessary for a user to understand the depicted phenomenon, including descriptions and explanations",
+          "Neutral: without bias in selection or presentation; supported by prudence",
+          "Free from error: no errors or omissions in the description; process applied with no errors"
+        ],
+        "prudence": "Exercise of caution when making judgements under uncertainty. Assets and income should not be overstated; liabilities and expenses should not be understated. Prudence does NOT permit deliberate understatement of assets/income.",
+        "substance_over_form": "Financial reports should represent the economic substance of transactions, not merely their legal form"
+      },
+      "source": "IFRS Conceptual Framework, Chapter 2, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["relevance", "faithful representation", "materiality", "completeness", "neutrality", "free from error", "prudence", "substance over form", "CF Chapter 2"]
+    },
+    {
+      "rule_id": "IFRS-CF-003",
+      "rule_code": "CF 2018 — Chapter 2: Enhancing Characteristics",
+      "title": "Enhancing Qualitative Characteristics: Comparability, Verifiability, Timeliness, Understandability",
+      "category": "Conceptual Framework — Enhancing Characteristics",
+      "description": "The enhancing qualitative characteristics increase the usefulness of information that is already relevant and faithfully represented.",
+      "characteristics": [
+        {
+          "name": "Comparability",
+          "description": "Information is more useful if it can be compared with similar information about other entities and for prior periods of the same entity. Consistency (applying same policies period-to-period) helps achieve comparability.",
+          "note": "Comparability is not uniformity — different entities may use different methods if those methods faithfully represent their circumstances"
+        },
+        {
+          "name": "Verifiability",
+          "description": "Helps assure users that information faithfully represents what it purports to represent. Verification can be direct (counting cash) or indirect (checking inputs and recalculating outputs).",
+          "note": "Forward-looking information (e.g., forecasts) can still be verifiable if methodology and key assumptions are disclosed"
+        },
+        {
+          "name": "Timeliness",
+          "description": "Information is available to decision-makers in time to be capable of influencing their decisions. Generally, older information is less useful.",
+          "note": "Some information may remain timely for some time after the reporting period (e.g., identifying trends)"
+        },
+        {
+          "name": "Understandability",
+          "description": "Classifying, characterising, and presenting information clearly and concisely makes it understandable. Financial reports are prepared for users who have a reasonable knowledge of business and economic activities.",
+          "note": "Complex or difficult information should not be excluded just because some users may not understand it"
+        }
+      ],
+      "cost_constraint": "Benefits of reporting financial information must justify the costs of providing and using that information. Cost is a pervasive constraint on the information that can be provided.",
+      "source": "IFRS Conceptual Framework, Chapter 2, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["comparability", "verifiability", "timeliness", "understandability", "consistency", "cost constraint", "CF Chapter 2"]
+    },
+    {
+      "rule_id": "IFRS-CF-004",
+      "rule_code": "CF 2018 — Chapter 3",
+      "title": "Financial Statements and Reporting Entity",
+      "category": "Conceptual Framework — Reporting Entity",
+      "description": "A reporting entity is an entity that is required or chooses to prepare financial statements. It is not necessarily a legal entity.",
+      "key_principles": [
+        "Financial statements may be for a single entity, a group (consolidated), or a part of an entity",
+        "The going concern assumption: financial statements assume the entity will continue operating for the foreseeable future",
+        "If management intends to liquidate or cease operations: different basis must be used and disclosed",
+        "The reporting period: financial statements normally prepared on at least an annual basis; if the reporting period changes, the reason and any impracticability of comparing periods must be disclosed"
+      ],
+      "going_concern_definition": "An entity is a going concern unless management intends to liquidate or to cease trading, or has no realistic alternative but to do so. Material uncertainties about going concern must be disclosed.",
+      "source": "IFRS Conceptual Framework, Chapter 3, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["going concern", "reporting entity", "consolidated", "annual basis", "liquidity", "CF Chapter 3"]
+    },
+    {
+      "rule_id": "IFRS-CF-005",
+      "rule_code": "CF 2018 — Chapter 4",
+      "title": "Elements of Financial Statements — Definitions",
+      "category": "Conceptual Framework — Elements",
+      "description": "The Conceptual Framework defines five elements of financial statements under the 2018 revision.",
+      "elements": [
+        {
+          "element": "Asset",
+          "definition": "A present economic resource controlled by the entity as a result of past events. An economic resource is a right that has the potential to produce economic benefits.",
+          "key_change_2018": "Previous definition required 'probable' future economic benefits. 2018 CF removes the probability threshold from the definition — probability affects recognition, not definition."
+        },
+        {
+          "element": "Liability",
+          "definition": "A present obligation of the entity to transfer an economic resource as a result of past events.",
+          "key_aspects": "Obligation must be present (existing, not future); there must be no practical ability to avoid it"
+        },
+        {
+          "element": "Equity",
+          "definition": "The residual interest in the assets of the entity after deducting all its liabilities.",
+          "note": "Equity = Assets - Liabilities. Classes of equity instruments (ordinary shares, preference shares, retained earnings, other comprehensive income) may be presented separately."
+        },
+        {
+          "element": "Income",
+          "definition": "Increases in assets, or decreases in liabilities, that result in increases in equity, other than those relating to contributions from holders of equity claims.",
+          "includes": "Revenue (from ordinary activities) and Gains (from non-ordinary activities)"
+        },
+        {
+          "element": "Expense",
+          "definition": "Decreases in assets, or increases in liabilities, that result in decreases in equity, other than those relating to distributions to holders of equity claims.",
+          "includes": "Expenses (from ordinary activities) and Losses (from non-ordinary activities)"
+        }
+      ],
+      "source": "IFRS Conceptual Framework, Chapter 4, IASB March 2018",
+      "official_url": "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/conceptual-framework-for-financial-reporting.pdf",
+      "tags": ["asset definition", "liability definition", "equity", "income", "expense", "elements", "CF Chapter 4", "economic resource"]
+    },
+    {
+      "rule_id": "IFRS-CF-006",
+      "rule_code": "CF 2018 — Chapter 5",
+      "title": "Recognition and Derecognition of Elements",
+      "category": "Conceptual Framework — Recognition",
+      "description": "Recognition is the process of capturing an item in the financial statements when it meets the definition of an element and the recognition criteria.",
+      "recognition_criteria": [
+        "An item should be recognised if it meets the definition of an element",
+        "Recognition should be provided when it provides: (a) relevant information, AND (b) a faithful representation",
+        "Low probability of economic benefit flow does not necessarily prevent recognition but affects relevance and faithful representation",
+        "High measurement uncertainty may reduce relevance of recognition"
+      ],
+      "derecognition_criteria": [
+        "Assets: when entity loses control of all or part of a recognised asset",
+        "Liabilities: when entity no longer has a present obligation for all or part of a recognised liability",
+        "Partial derecognition is possible when an entity transfers part of an asset or liability"
+      ],
+      "source": "IFRS Conceptual Framework, Chapter 5, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["recognition", "derecognition", "control", "probability", "measurement uncertainty", "CF Chapter 5"]
+    },
+    {
+      "rule_id": "IFRS-CF-007",
+      "rule_code": "CF 2018 — Chapter 6",
+      "title": "Measurement Bases",
+      "category": "Conceptual Framework — Measurement",
+      "description": "Measurement is the process of quantifying in monetary terms the elements of financial statements. The 2018 Framework identifies historical cost and current value as the two main measurement categories.",
+      "measurement_bases": [
+        {
+          "basis": "Historical Cost",
+          "description": "Assets: amount paid (cost); Liabilities: proceeds received. Does not reflect changes in value after transaction date.",
+          "advantage": "Verifiable, objective, directly derived from actual transaction"
+        },
+        {
+          "basis": "Fair Value",
+          "description": "The price received to sell an asset (or paid to transfer a liability) in an orderly transaction between market participants at the measurement date (exit price). Reflects market conditions.",
+          "standard_ref": "IFRS 13 Fair Value Measurement provides the framework for determining fair value"
+        },
+        {
+          "basis": "Value in Use (assets) / Fulfilment Value (liabilities)",
+          "description": "Value in use: present value of cash flows the entity expects to derive from using the asset and its disposal. Fulfilment value: present value of cash flows the entity expects to incur fulfilling the liability. Entity-specific (not market-based)."
+        },
+        {
+          "basis": "Current Cost",
+          "description": "For assets: cost of equivalent asset at measurement date. For liabilities: consideration that would be received for equivalent liability at measurement date. Reflects current market conditions of entry rather than exit."
+        }
+      ],
+      "selection_factors": [
+        "Relevance of the measurement basis to future cash flows",
+        "Whether the basis provides faithful representation",
+        "Comparability — consistency with other entities and prior periods",
+        "Cost/benefit — availability and reliability of information"
+      ],
+      "source": "IFRS Conceptual Framework, Chapter 6, IASB March 2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/",
+      "tags": ["historical cost", "fair value", "current value", "value in use", "fulfilment value", "current cost", "measurement", "CF Chapter 6"]
+    },
+    {
+      "rule_id": "IFRS-IAS1-001",
+      "rule_code": "IAS 1 — Presentation of Financial Statements",
+      "title": "IAS 1: Complete Set of Financial Statements and Key Presentation Principles",
+      "category": "Financial Statement Presentation",
+      "description": "IAS 1 sets out overall requirements for financial statement presentation, minimum content requirements, and fundamental presentation principles.",
+      "complete_set": [
+        "Statement of Financial Position (Balance Sheet) as at end of period",
+        "Statement of Profit or Loss and Other Comprehensive Income for the period",
+        "Statement of Changes in Equity for the period",
+        "Statement of Cash Flows for the period",
+        "Notes — accounting policies and other explanatory information",
+        "Comparative information for prior period (for all amounts)",
+        "Statement of Financial Position at beginning of earliest comparative period (when retrospective restatement made)"
+      ],
+      "fundamental_principles": [
+        {
+          "principle": "Fair Presentation",
+          "description": "Financial statements must present fairly financial position, performance and cash flows. Fair presentation requires faithful representation of effects of transactions, events, and conditions in accordance with the Conceptual Framework."
+        },
+        {
+          "principle": "Going Concern",
+          "description": "Statements prepared on going concern basis unless management intends to liquidate or has no realistic alternative. Material uncertainties must be disclosed."
+        },
+        {
+          "principle": "Accrual Basis",
+          "description": "All financial statements (except cash flow) must be prepared using the accrual basis of accounting."
+        },
+        {
+          "principle": "Materiality and Aggregation",
+          "description": "Each material class of similar items must be presented separately. Immaterial items may be aggregated. Items of dissimilar nature must be presented separately unless immaterial."
+        },
+        {
+          "principle": "No Offsetting",
+          "description": "Assets and liabilities must NOT be offset unless required/permitted by another IFRS. Income and expenses must NOT be offset unless required/permitted. This prevents masking of transactions."
+        },
+        {
+          "principle": "Comparative Information",
+          "description": "Minimum of one period of comparative information (prior period) for all amounts reported."
+        },
+        {
+          "principle": "Consistency of Presentation",
+          "description": "Presentation and classification of items should be retained from one period to the next unless a change improves the presentation or is required by an IFRS."
+        }
+      ],
+      "effective_date": "01-01-2009",
+      "last_amended": "01-01-2024",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
+      "tags": ["IAS 1", "financial statements", "fair presentation", "going concern", "accrual", "materiality", "no offsetting", "comparatives", "consistency"]
+    },
+    {
+      "rule_id": "IFRS-IAS2-001",
+      "rule_code": "IAS 2 — Inventories",
+      "title": "IAS 2: Measurement, Cost Formulas, and Write-Down of Inventories",
+      "category": "Inventories",
+      "description": "IAS 2 prescribes the accounting treatment for inventories, including determination of cost and subsequent recognition as expense.",
+      "key_requirements": [
+        {
+          "topic": "Measurement",
+          "requirement": "Inventories must be measured at the lower of: (a) cost, or (b) net realisable value (NRV). NRV = estimated selling price less estimated costs to complete and sell."
+        },
+        {
+          "topic": "Cost of Inventories",
+          "requirement": "Cost includes all costs of purchase (including duties and freight, less trade discounts), costs of conversion (direct labour, systematic allocation of fixed and variable production overheads), and other costs incurred in bringing inventories to present location and condition."
+        },
+        {
+          "topic": "Excluded from Cost",
+          "requirement": "Abnormal waste, storage costs (unless necessary for production), administrative overheads unrelated to production, and selling costs are NOT included in the cost of inventories."
+        },
+        {
+          "topic": "Cost Formulas",
+          "requirement": "For ordinarily interchangeable items: FIFO (First-In, First-Out) or Weighted Average Cost formula must be used. Specific identification used for items that are not interchangeable. LIFO method is NOT permitted under IFRS."
+        },
+        {
+          "topic": "Write-Down",
+          "requirement": "Inventories must be written down to NRV when NRV < cost. Write-down is recognised as expense in the period it occurs. If NRV subsequently increases, the write-down is reversed."
+        },
+        {
+          "topic": "Disclosure",
+          "requirement": "Accounting policies for inventories; carrying amount by classification (raw materials, WIP, finished goods); amounts recognised as expense; write-down amounts; reversals of write-downs."
+        }
+      ],
+      "effective_date": "01-01-2005",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+      "tags": ["IAS 2", "inventories", "lower of cost or NRV", "FIFO", "weighted average", "no LIFO", "write-down", "NRV"]
+    },
+    {
+      "rule_id": "IFRS-IAS7-001",
+      "rule_code": "IAS 7 — Statement of Cash Flows",
+      "title": "IAS 7: Classification and Preparation of Cash Flow Statement",
+      "category": "Cash Flow Statement",
+      "description": "IAS 7 requires a statement of cash flows showing changes in cash and cash equivalents from operating, investing, and financing activities.",
+      "cash_flow_categories": [
+        {
+          "category": "Operating Activities",
+          "description": "Principal revenue-producing activities and other activities that are not investing or financing. Examples: cash receipts from sale of goods, payments to suppliers, payments to/from employees, tax payments."
+        },
+        {
+          "category": "Investing Activities",
+          "description": "Acquisition and disposal of long-term assets and other investments. Examples: purchase/sale of property, plant and equipment; purchase/sale of equity or debt instruments; loans made to third parties."
+        },
+        {
+          "category": "Financing Activities",
+          "description": "Activities that result in changes in size and composition of the entity's equity and borrowings. Examples: proceeds from issuing shares; repayment of borrowings; payment of dividends."
+        }
+      ],
+      "methods": [
+        {
+          "method": "Direct Method (Operating Activities)",
+          "description": "Major classes of gross cash receipts and payments disclosed. Encouraged by IAS 7."
+        },
+        {
+          "method": "Indirect Method (Operating Activities)",
+          "description": "Net profit/loss is adjusted for non-cash items, changes in working capital, and items related to investing/financing. Widely used in practice."
+        }
+      ],
+      "cash_equivalents": "Short-term, highly liquid investments that are readily convertible to known amounts of cash and which are subject to insignificant risk of changes in value. Generally, investments with original maturity of 3 months or less.",
+      "effective_date": "01-01-1994",
+      "last_amended": "2016",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/",
+      "tags": ["IAS 7", "cash flow statement", "operating activities", "investing activities", "financing activities", "direct method", "indirect method", "cash equivalents"]
+    },
+    {
+      "rule_id": "IFRS-IAS8-001",
+      "rule_code": "IAS 8 — Accounting Policies, Estimates and Errors",
+      "title": "IAS 8: Selecting Policies, Changes in Estimates, and Correcting Errors",
+      "category": "Accounting Policies and Errors",
+      "description": "IAS 8 prescribes criteria for selecting accounting policies, accounting for changes in policies and estimates, and correcting prior period errors.",
+      "key_requirements": [
+        {
+          "topic": "Selection of Accounting Policies",
+          "requirement": "When an IFRS Standard applies to a transaction: follow that Standard. When no IFRS applies: use judgement to develop a policy that provides relevant and reliable information (by analogy to similar IFRS Standards or the Conceptual Framework)."
+        },
+        {
+          "topic": "Consistency",
+          "requirement": "Apply the same accounting policies consistently for similar transactions unless IFRS specifically requires/permits categorisation."
+        },
+        {
+          "topic": "Change in Accounting Policy",
+          "requirement": "Only if required by an IFRS, or if the change results in more reliable and relevant financial information. Apply RETROSPECTIVELY (restate prior periods) unless impracticable."
+        },
+        {
+          "topic": "Change in Accounting Estimate",
+          "requirement": "Effect recognised PROSPECTIVELY — in current period and future periods. Not retrospectively restated. A change in estimate is not an error. Examples: useful life of asset, warranty provisions, doubtful debt estimates."
+        },
+        {
+          "topic": "Prior Period Errors",
+          "requirement": "Material prior period errors must be corrected retrospectively by restating comparative amounts. Restate the opening balance for the earliest period presented. Immaterial prior period errors may be corrected in current period. Disclosure of nature, amount, and how corrected is required."
+        }
+      ],
+      "effective_date": "01-01-2005",
+      "last_amended": "Amended 2021 — definition of accounting estimates changed",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-8-accounting-policies-changes-in-accounting-estimates-and-errors/",
+      "tags": ["IAS 8", "accounting policy", "consistency", "retrospective", "prospective", "prior period error", "change in estimate", "restatement"]
+    },
+    {
+      "rule_id": "IFRS-IAS10-001",
+      "rule_code": "IAS 10 — Events After the Reporting Period",
+      "title": "IAS 10: Adjusting and Non-Adjusting Events After the Reporting Period",
+      "category": "Post-Reporting Period Events",
+      "description": "IAS 10 prescribes when to adjust financial statements for events occurring between the end of the reporting period and the date of authorisation for issue.",
+      "adjusting_events": {
+        "definition": "Events that provide evidence of conditions that existed at the end of the reporting period",
+        "examples": [
+          "Settlement of a court case after the reporting period that confirms the entity had a present obligation at period end",
+          "Bankruptcy of a major customer after period end — confirming a loss existed at period end",
+          "Discovery of fraud or errors showing statements were incorrect",
+          "Determination of purchase price/sale price on business combinations where provisional at period end"
+        ],
+        "treatment": "Financial statements must be ADJUSTED to reflect adjusting events"
+      },
+      "non_adjusting_events": {
+        "definition": "Events that are indicative of conditions that arose AFTER the end of the reporting period",
+        "examples": [
+          "Major business combination after period end",
+          "Major disposal of a subsidiary after period end",
+          "Fire destroying a major production plant after period end",
+          "Dividends declared after period end (NOT recognised as liability at period end)",
+          "Major decline in fair value of investments between period end and authorisation date"
+        ],
+        "treatment": "Financial statements must NOT be adjusted. Disclose if material."
+      },
+      "dividends_rule": "Dividends declared after the reporting period must NOT be recognised as a liability in the financial statements. They are disclosed only.",
+      "going_concern_post_period": "If management determines after period end that going concern basis is no longer appropriate, financial statements must not be prepared on going concern basis.",
+      "effective_date": "01-01-2005",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-10-events-after-the-reporting-period/",
+      "tags": ["IAS 10", "adjusting events", "non-adjusting events", "post-period", "dividends", "going concern", "conditions at period end"]
+    },
+    {
+      "rule_id": "IFRS-IAS16-001",
+      "rule_code": "IAS 16 — Property, Plant and Equipment",
+      "title": "IAS 16: Recognition, Measurement and Depreciation of PP&E",
+      "category": "Property, Plant and Equipment",
+      "description": "IAS 16 prescribes the accounting treatment for property, plant and equipment (PP&E) including recognition, initial measurement, subsequent measurement, and depreciation.",
+      "recognition_criteria": [
+        "It is probable that future economic benefits associated with the item will flow to the entity",
+        "The cost of the item can be measured reliably"
+      ],
+      "initial_measurement": "Cost model: cost includes purchase price, directly attributable costs of bringing the asset to its intended location and condition, and initial estimate of dismantlement/restoration costs.",
+      "subsequent_measurement_models": [
+        {
+          "model": "Cost Model",
+          "description": "Carried at cost less accumulated depreciation and accumulated impairment losses"
+        },
+        {
+          "model": "Revaluation Model",
+          "description": "Carried at revalued amount (fair value at date of revaluation) less subsequent accumulated depreciation and impairment. Revaluations must be performed regularly enough that carrying amount does not differ materially from fair value."
+        }
+      ],
+      "depreciation": {
+        "basis": "Depreciable amount (cost or revalued amount less residual value) allocated systematically over the asset's useful life",
+        "methods": "Straight-line, diminishing balance, and units of production methods are permitted. Depreciation method must reflect the pattern of consumption of future economic benefits.",
+        "review": "Residual value, useful life, and depreciation method must be reviewed at least at each annual reporting date. Changes treated as change in estimate (prospective under IAS 8).",
+        "start": "Depreciation begins when asset is available for use; ceases on the earlier of derecognition or classification as held for sale (IFRS 5)"
+      },
+      "component_accounting": "Each part of an item of PP&E with a cost that is significant in relation to the total cost must be depreciated separately.",
+      "effective_date": "01-01-2005",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-16-property-plant-and-equipment/",
+      "tags": ["IAS 16", "PP&E", "depreciation", "cost model", "revaluation model", "component accounting", "useful life", "residual value", "impairment"]
+    },
+    {
+      "rule_id": "IFRS-IAS24-001",
+      "rule_code": "IAS 24 — Related Party Disclosures",
+      "title": "IAS 24: Related Party Relationships and Transaction Disclosures",
+      "category": "Related Party Disclosures",
+      "description": "IAS 24 requires disclosure of related party relationships and transactions to ensure financial statements draw attention to possible effects on financial position and profit/loss.",
+      "related_party_definition": [
+        "A person or close member of that person's family who controls or has significant influence or joint control over the entity, OR who is a member of key management personnel (KMP) of the entity or its parent",
+        "Subsidiaries, associates, joint ventures of the entity",
+        "Parent companies, fellow subsidiaries",
+        "Post-employment benefit plans for employees of the entity",
+        "An entity controlled or significantly influenced by KMP or close family member",
+        "An entity that provides KMP services to the entity or its parent"
+      ],
+      "mandatory_disclosures": [
+        "Parent-subsidiary relationship: must disclose name of parent and ultimate controlling party, regardless of whether transactions occurred",
+        "KMP compensation: total for the entity and parent, split by: short-term employee benefits, post-employment benefits, other long-term benefits, termination benefits, share-based payments",
+        "Related party transactions: nature of relationship, amount, outstanding balances (terms and conditions, security, settlement method), expense for bad/doubtful debts",
+        "Guarantees given to or received from related parties",
+        "Services provided by or to related parties on terms different from market terms",
+        "Disclosure required even if no consideration is charged"
+      ],
+      "government_related_entities": "Partial exemption available for government-related entities — not required to disclose details of individually immaterial transactions with government-controlled entities, but must still disclose name and nature of related government relationship and significant transactions.",
+      "effective_date": "01-01-2011",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-24-related-party-disclosures/",
+      "tags": ["IAS 24", "related party", "KMP", "key management personnel", "parent subsidiary", "transactions", "compensation disclosure", "government related"]
+    },
+    {
+      "rule_id": "IFRS-IAS36-001",
+      "rule_code": "IAS 36 — Impairment of Assets",
+      "title": "IAS 36: Impairment Testing and Recognition of Impairment Losses",
+      "category": "Asset Impairment",
+      "description": "IAS 36 ensures that assets are carried at no more than their recoverable amount, requiring impairment testing and recognition of impairment losses.",
+      "recoverable_amount": {
+        "definition": "Higher of an asset's fair value less costs to sell (FVLCTS) and its value in use (VIU)",
+        "fair_value_less_costs_to_sell": "Amount obtainable from sale in arm's length transaction, less disposal costs",
+        "value_in_use": "Present value of estimated future cash flows expected to arise from continuing use of the asset and from its disposal at end of useful life"
+      },
+      "impairment_indicators": [
+        "External: significant decline in market value; adverse changes in technology/market/economy/legal environment; increase in interest rates; carrying amount of net assets exceeds market capitalisation",
+        "Internal: evidence of obsolescence or physical damage; significant changes in use; worse-than-expected economic performance"
+      ],
+      "mandatory_annual_impairment_testing": [
+        "Goodwill acquired in a business combination",
+        "Intangible assets with indefinite useful life",
+        "Intangible assets not yet available for use"
+      ],
+      "cash_generating_unit": "Where it is not possible to estimate recoverable amount for an individual asset, recoverable amount is determined for the cash-generating unit (CGU) — the smallest identifiable group of assets that generates cash inflows that are largely independent of cash inflows from other assets.",
+      "impairment_loss": "If carrying amount > recoverable amount: the difference is recognised as impairment loss in profit or loss (or for revalued assets: as decrease in the revaluation surplus).",
+      "reversal_of_impairment": "An impairment loss may be reversed if the recoverable amount increases subsequently. EXCEPTION: Impairment loss on goodwill CANNOT be reversed.",
+      "effective_date": "31-03-2004",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/",
+      "tags": ["IAS 36", "impairment", "recoverable amount", "fair value", "value in use", "CGU", "goodwill impairment", "reversal", "annual test"]
+    },
+    {
+      "rule_id": "IFRS-IAS37-001",
+      "rule_code": "IAS 37 — Provisions, Contingent Liabilities and Contingent Assets",
+      "title": "IAS 37: Recognition and Measurement of Provisions",
+      "category": "Provisions and Contingencies",
+      "description": "IAS 37 prescribes appropriate recognition criteria and measurement bases for provisions, contingent liabilities, and contingent assets.",
+      "provision_recognition_criteria": [
+        "(a) Entity has a present obligation (legal or constructive) as a result of a past event",
+        "(b) It is probable (more likely than not) that an outflow of resources embodying economic benefits will be required",
+        "(c) A reliable estimate can be made of the amount of the obligation"
+      ],
+      "measurement": "Best estimate of the expenditure required to settle the present obligation. For a large population, expected value method. For a single obligation, most likely outcome adjusted for other possible outcomes.",
+      "restructuring_provision": "Can be recognised when: (a) entity has a formal restructuring plan, AND (b) has raised a valid expectation in those affected by the plan — by announcing the plan or beginning to implement it.",
+      "contingent_liability": {
+        "definition": "A possible obligation depending on future events, OR a present obligation where outflow is not probable or amount cannot be reliably estimated",
+        "treatment": "Not recognised in financial statements. Disclosed unless possibility of outflow is remote."
+      },
+      "contingent_asset": {
+        "definition": "A possible asset from past events depending on future events not wholly within control of entity",
+        "treatment": "Not recognised. Disclosed when inflow of economic benefits is probable. Recognised only when virtually certain."
+      },
+      "effective_date": "01-07-1999",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/",
+      "tags": ["IAS 37", "provisions", "contingent liability", "contingent asset", "probable", "restructuring", "best estimate", "recognition criteria"]
+    },
+    {
+      "rule_id": "IFRS-IAS38-001",
+      "rule_code": "IAS 38 — Intangible Assets",
+      "title": "IAS 38: Recognition and Measurement of Intangible Assets",
+      "category": "Intangible Assets",
+      "description": "IAS 38 prescribes the accounting treatment for intangible assets that are not dealt with specifically in another Standard.",
+      "recognition_criteria": [
+        "(a) The intangible asset definition is met: identifiable (separable OR arises from contractual/legal rights), non-monetary, without physical substance",
+        "(b) It is probable that the expected future economic benefits attributable to the asset will flow to the entity",
+        "(c) The cost of the asset can be measured reliably"
+      ],
+      "internally_generated_intangibles": {
+        "goodwill": "Internally generated goodwill is NOT recognised as an asset",
+        "brands_mastheads_customer_lists": "NOT recognised if internally generated",
+        "research_phase": "All expenditure in research phase must be expensed as incurred — no asset is recognised",
+        "development_phase": "An intangible asset arising from development may be recognised only if ALL 6 criteria are met: (a) technical feasibility; (b) intention to complete; (c) ability to use or sell; (d) probable future economic benefits; (e) adequate resources; (f) ability to reliably measure the expenditure"
+      },
+      "measurement_models": [
+        "Cost model: cost less accumulated amortisation and impairment",
+        "Revaluation model: fair value at date of revaluation less subsequent accumulated amortisation and impairment — only if active market exists"
+      ],
+      "useful_life": "Finite useful life: amortise systematically over useful life. Indefinite useful life (no foreseeable limit): NO amortisation, but mandatory annual impairment test (IAS 36).",
+      "effective_date": "31-03-2004",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/",
+      "tags": ["IAS 38", "intangible assets", "research phase", "development phase", "internally generated", "goodwill not recognised", "amortisation", "indefinite useful life", "active market"]
+    },
+    {
+      "rule_id": "IFRS-IFRS9-001",
+      "rule_code": "IFRS 9 — Financial Instruments: Classification",
+      "title": "IFRS 9: Classification and Measurement of Financial Assets",
+      "category": "Financial Instruments — Classification",
+      "description": "IFRS 9 classifies financial assets into three measurement categories based on the entity's business model and the contractual cash flow characteristics of the asset.",
+      "classification_categories": [
+        {
+          "category": "Amortised Cost (AC)",
+          "criteria": "Business model objective: hold to collect contractual cash flows AND contractual cash flows are solely payments of principal and interest (SPPI test)",
+          "examples": "Loans, bonds held to maturity, trade receivables",
+          "measurement": "Effective interest method; impairment through ECL model"
+        },
+        {
+          "category": "Fair Value through Other Comprehensive Income (FVOCI)",
+          "criteria": "Business model objective: both collect contractual cash flows AND sell financial assets AND SPPI test met",
+          "examples": "Debt instruments in hold-to-collect-and-sell portfolio; equity instruments with FVOCI election",
+          "measurement": "Fair value on balance sheet; gains/losses in OCI; on disposal, cumulative OCI recycled to P&L (for debt); NOT recycled to P&L for equity FVOCI election"
+        },
+        {
+          "category": "Fair Value through Profit or Loss (FVTPL)",
+          "criteria": "All financial assets not qualifying for AC or FVOCI; also, trading assets; assets designated at FVTPL to eliminate or reduce accounting mismatch",
+          "examples": "Equity securities held for trading, derivatives (assets)",
+          "measurement": "Fair value on balance sheet; all gains/losses in profit or loss"
+        }
+      ],
+      "effective_date": "01-01-2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+      "tags": ["IFRS 9", "financial assets", "amortised cost", "FVOCI", "FVTPL", "SPPI test", "business model", "classification"]
+    },
+    {
+      "rule_id": "IFRS-IFRS9-002",
+      "rule_code": "IFRS 9 — Financial Instruments: Impairment (ECL Model)",
+      "title": "IFRS 9: Expected Credit Loss (ECL) Impairment Model",
+      "category": "Financial Instruments — Impairment",
+      "description": "IFRS 9 replaces the 'incurred loss' model with an 'expected credit loss' (ECL) model — forward-looking, recognising credit losses before they actually occur.",
+      "ecl_stages": [
+        {
+          "stage": "Stage 1 — 12-month ECL",
+          "trigger": "No significant increase in credit risk since initial recognition",
+          "ecl_measurement": "12-month ECL — expected credit losses from default events possible within 12 months",
+          "interest": "Effective interest on gross carrying amount"
+        },
+        {
+          "stage": "Stage 2 — Lifetime ECL",
+          "trigger": "Significant increase in credit risk since initial recognition but not yet credit-impaired",
+          "ecl_measurement": "Lifetime ECL — expected credit losses from all possible default events over expected life",
+          "interest": "Effective interest on gross carrying amount"
+        },
+        {
+          "stage": "Stage 3 — Lifetime ECL (credit-impaired)",
+          "trigger": "Financial asset is credit-impaired (e.g., in default, 90+ days past due, significant financial difficulty)",
+          "ecl_measurement": "Lifetime ECL",
+          "interest": "Effective interest on NET carrying amount (net of loss allowance)"
+        }
+      ],
+      "simplified_approach": "For trade receivables, contract assets and lease receivables: entity may use simplified approach — always measure loss allowance at lifetime ECL (no staging required). Practical expedient: provision matrix using historical credit loss rates adjusted for current and forward-looking conditions.",
+      "effective_date": "01-01-2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+      "tags": ["IFRS 9", "ECL", "expected credit loss", "Stage 1", "Stage 2", "Stage 3", "credit-impaired", "provision matrix", "trade receivables", "impairment model"]
+    },
+    {
+      "rule_id": "IFRS-IFRS15-001",
+      "rule_code": "IFRS 15 — Revenue from Contracts with Customers",
+      "title": "IFRS 15: Five-Step Revenue Recognition Model",
+      "category": "Revenue Recognition",
+      "description": "IFRS 15 establishes a single model for revenue recognition based on a 5-step process. Revenue is recognised when (or as) performance obligations are satisfied.",
+      "five_steps": [
+        {
+          "step": 1,
+          "title": "Identify the contract with a customer",
+          "key_criteria": "Contract must be approved, rights and payment terms identifiable, commercial substance, probable collection of consideration. If criteria not met: no revenue recognised until met or all consideration received."
+        },
+        {
+          "step": 2,
+          "title": "Identify the performance obligations",
+          "key_criteria": "A performance obligation is a promise to transfer a distinct good/service (or series). A good/service is distinct if: customer can benefit from it on its own or with other readily available resources AND it is separately identifiable from other promises in the contract."
+        },
+        {
+          "step": 3,
+          "title": "Determine the transaction price",
+          "key_criteria": "Transaction price is the amount of consideration expected to be entitled to. Includes: variable consideration (estimated, constrained), significant financing component (adjust for time value if > 12 months), non-cash consideration (at fair value), consideration payable to customer (deducted)."
+        },
+        {
+          "step": 4,
+          "title": "Allocate the transaction price to performance obligations",
+          "key_criteria": "Allocate based on relative standalone selling prices (SSP). If SSP is not directly observable, estimate using: adjusted market assessment, expected cost plus margin, or residual approach (only for highly variable/uncertain SSP)."
+        },
+        {
+          "step": 5,
+          "title": "Recognise revenue when (or as) each performance obligation is satisfied",
+          "over_time_criteria": "Revenue over time if: (a) customer simultaneously receives and consumes benefits; OR (b) entity creates/enhances asset customer controls; OR (c) no alternative use and entity has enforceable right to payment for performance to date.",
+          "point_in_time": "If none of the over-time criteria met: revenue at point in time when control transfers to customer."
+        }
+      ],
+      "contract_modifications": "A change in contract scope/price that was not part of original contract. Accounted as new contract (if adds distinct goods/services at standalone price) or modification of existing contract (retrospective or prospective depending on nature).",
+      "principal_vs_agent": "If entity controls the good/service before transfer to customer: principal (recognise gross revenue). If entity arranges for the good/service to be provided by another party: agent (recognise net revenue = fee/commission).",
+      "effective_date": "01-01-2018",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
+      "tags": ["IFRS 15", "revenue", "five-step model", "performance obligation", "transaction price", "standalone selling price", "over time", "point in time", "principal agent", "contract modification"]
+    },
+    {
+      "rule_id": "IFRS-IFRS16-001",
+      "rule_code": "IFRS 16 — Leases",
+      "title": "IFRS 16: Lessee Accounting — Right-of-Use Asset and Lease Liability",
+      "category": "Leases",
+      "description": "IFRS 16 requires lessees to recognise nearly all leases on the balance sheet as a right-of-use (ROU) asset and a corresponding lease liability — eliminating the operating vs finance lease distinction for lessees.",
+      "lessee_accounting": {
+        "right_of_use_asset": {
+          "initial_recognition": "Initial lease liability + initial direct costs + prepaid lease payments + estimated restoration costs less lease incentives received",
+          "subsequent_measurement": "Cost model: depreciated on straight-line basis over shorter of lease term or useful life of underlying asset. Subject to impairment testing (IAS 36).",
+          "revaluation_model": "Available only if underlying asset belongs to a class for which entity applies revaluation model"
+        },
+        "lease_liability": {
+          "initial_recognition": "Present value of unpaid lease payments at the commencement date, discounted at the implicit rate in the lease (or incremental borrowing rate if implicit rate cannot be readily determined)",
+          "lease_payments_included": "Fixed payments (including in-substance fixed); variable payments linked to index or rate; residual value guarantees; exercise price of purchase option (if reasonably certain); penalty for termination (if reflects lease term)",
+          "subsequent_measurement": "Effective interest method; remeasured when significant events or changes in circumstances"
+        }
+      },
+      "exemptions": [
+        "Short-term leases (lease term of 12 months or less — at commencement date)",
+        "Leases of low-value assets (e.g., laptops, small office furniture — threshold approximately USD 5,000 when new)",
+        "For both exemptions: lease payments recognised on straight-line basis over lease term in profit or loss"
+      ],
+      "lessor_accounting": "IFRS 16 retains the finance lease / operating lease distinction for LESSORS. Finance lease: lessor derecognises the asset and recognises a lease receivable. Operating lease: lessor keeps the asset and recognises lease income on straight-line or systematic basis.",
+      "sale_and_leaseback": "If transfer qualifies as a sale (IFRS 15): seller-lessee recognises ROU asset and gain/loss only to the extent of rights retained/transferred. If not a sale: entity continues to recognise the asset and recognises a financial liability.",
+      "effective_date": "01-01-2019",
+      "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/",
+      "tags": ["IFRS 16", "leases", "right-of-use asset", "lease liability", "lessee", "operating lease", "finance lease", "short-term exemption", "low-value", "sale and leaseback", "implicit rate"]
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "_metadata": {
+    "dataset_name": "GST Accounts and Records Rules — Comprehensive",
+    "source_authority": "Central Board of Indirect Taxes and Customs (CBIC) + Ministry of Corporate Affairs (MCA)",
+    "governing_acts": [
+      "Central Goods and Services Tax Act, 2017 — Sections 35 and 36",
+      "CGST Rules 2017 — Chapter VII (Rules 56, 57, 58)",
+      "Companies Act, 2013 — Section 128; Companies (Accounts) Rules, 2014 (Rules 3, 4)"
+    ],
+    "official_url": "https://cbic-gst.gov.in; https://www.mca.gov.in",
+    "last_amended": "Companies (Accounts) Fourth Amendment Rules, 2022 (08.08.2022); Notification No. 20/2024-Central Tax (01.11.2024)",
+    "version": "2.0",
+    "schema_version": "1.0",
+    "total_rules": 23,
+    "tags": ["accounts", "records", "GST", "CGST Chapter VII", "Companies Act", "retention", "electronic records", "India"]
+  },
+  "rules": [
+    {
+      "rule_id": "ACCT-GST-001",
+      "rule_code": "CGST Act Section 35(1)",
+      "title": "Mandatory Books of Account — Registered Persons Under GST",
+      "category": "GST Books of Account — Mandatory",
+      "description": "Every registered person shall keep and maintain, at his principal place of business, a true and correct account of the following.",
+      "mandatory_accounts": [
+        "(a) Production or manufacture of goods",
+        "(b) Inward and outward supply of goods or services or both",
+        "(c) Stock of goods",
+        "(d) Input tax credit availed",
+        "(e) Output tax payable and paid",
+        "(f) Such other particulars as may be prescribed (per Rule 56)"
+      ],
+      "multiple_places_of_business": "Where a person has multiple places of business, accounts related to each place must be kept at that place",
+      "electronic_records": "Accounts may be maintained in electronic form as per Rule 57",
+      "additional_requirements_by_commissioner": "Commissioner may, by notification, prescribe additional accounts or documents to be maintained by a specified class of taxable persons (Section 35(3))",
+      "relaxation_by_commissioner": "Commissioner may relax the provisions for a class of taxable persons who are not in a position to maintain prescribed records (Section 35(4))",
+      "penalty_for_non_compliance": "Section 122 of CGST Act — up to Rs. 10,000 or amount of tax evaded, whichever is higher",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["GST books of account", "Section 35", "principal place of business", "production", "inward supply", "outward supply", "ITC availed", "stock"]
+    },
+    {
+      "rule_id": "ACCT-GST-002",
+      "rule_code": "CGST Act Section 35(2)",
+      "title": "Accounts and Records by Warehouse/Godown Owners and Transporters",
+      "category": "Records by Third-Party Custodians",
+      "description": "Persons engaged in transporting goods or operating a warehouse/godown must also maintain prescribed accounts.",
+      "requirements": [
+        "Transporters: must maintain a true and correct record of goods transported, delivered, and stored in transit — including GSTIN of registered consigner and consignee for each branch",
+        "Warehouse/godown operators: must maintain books of account with respect to the period for which goods remain in the warehouse — including particulars relating to dispatch, movement, receipt and disposal of goods",
+        "Persons acting as carrier or clearing and forwarding agent on behalf of a registered person: must maintain records in respect of goods handled and produce on demand by proper officer",
+        "Enrolment: Persons who are required to maintain records but are not registered must submit details in FORM GST ENR-01 on the GST portal (Rule 58)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["warehouse records", "transporter records", "Section 35(2)", "clearing forwarding agent", "GSTIN consigner", "consignee", "ENR-01"]
+    },
+    {
+      "rule_id": "ACCT-GST-003",
+      "rule_code": "CGST Act Section 36",
+      "title": "Period of Retention of Accounts and Records — GST",
+      "category": "GST Record Retention",
+      "description": "Every registered person must retain books of account and other records for a minimum of 72 months (6 years) from the due date of filing the annual return for the year.",
+      "conditions": [
+        "Minimum retention period: 72 months (6 years) from the due date of Annual Return (GSTR-9) for the relevant financial year",
+        "Example: Records for FY 2024-25 (Annual Return due 31 Dec 2025) to be kept until 31 December 2031",
+        "If a registered person is a party to an appeal, revision, or investigation: records must be retained for 1 year after final disposal of such proceedings OR for 72 months from due date of annual return — whichever is LATER",
+        "Retention applies to all documents including invoices, bills of supply, credit/debit notes, delivery challans, accounts, and vouchers",
+        "Electronic records must comply with Rule 57 requirements for backup and accessibility",
+        "Note: Companies Act 2013 Section 128(5) requires 8 years — the more stringent of the two laws (8 years) should be followed for companies"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["GST record retention", "Section 36", "72 months", "6 years", "annual return", "appeal records", "GSTR-9"]
+    },
+    {
+      "rule_id": "ACCT-GST-004",
+      "rule_code": "CGST Rule 56(1)",
+      "title": "Additional Records — Imports, Exports, RCM Supplies",
+      "category": "Specific Record Keeping — RCM/Imports",
+      "description": "Every registered person must maintain, in addition to the accounts under Section 35(1), a true and correct account of goods/services imported, exported, or where tax is payable on reverse charge.",
+      "documents_to_maintain": [
+        "Invoices",
+        "Bills of supply",
+        "Delivery challans",
+        "Credit notes",
+        "Debit notes",
+        "Receipt vouchers",
+        "Payment vouchers",
+        "Refund vouchers"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 56(1)", "RCM records", "import records", "export records", "all vouchers", "invoice register"]
+    },
+    {
+      "rule_id": "ACCT-GST-005",
+      "rule_code": "CGST Rule 56(2)",
+      "title": "Stock Accounts — Non-Composition Registered Persons",
+      "category": "Stock Register",
+      "description": "Every registered person (other than a composition dealer) must maintain accounts of stock.",
+      "stock_account_contents": [
+        "Opening balance of stock",
+        "Goods received (inward supply)",
+        "Goods supplied (outward supply)",
+        "Goods lost, stolen, destroyed, written off",
+        "Goods disposed of by way of gift or free sample",
+        "Closing balance of stock",
+        "Applicable to: raw materials, finished goods, scrap, and wastage"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["stock register", "Rule 56(2)", "opening balance", "closing balance", "raw material", "finished goods", "scrap", "wastage", "gift", "free sample"]
+    },
+    {
+      "rule_id": "ACCT-GST-006",
+      "rule_code": "CGST Rule 56(3)",
+      "title": "Separate Account for Advances",
+      "category": "Advance Account",
+      "description": "Every registered person must maintain a separate account of advances received, paid, and adjustments made.",
+      "key_conditions": [
+        "Advances received for future supply of services must be tracked (GST payable on advances for services)",
+        "Advances paid to suppliers must be separately tracked for ITC purposes",
+        "Adjustments of advances against invoices must be documented and traceable",
+        "Unadjusted advance balances at year-end must be reconcilable with receipt/refund vouchers"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["advances register", "Rule 56(3)", "advance received", "advance paid", "adjustment", "receipt voucher"]
+    },
+    {
+      "rule_id": "ACCT-GST-007",
+      "rule_code": "CGST Rule 56(4)",
+      "title": "ITC and Output Tax Accounts",
+      "category": "Tax Ledgers",
+      "description": "Every registered person (other than composition dealer) must maintain accounts of ITC and output tax.",
+      "accounts_required": [
+        "Input tax credit availed on each invoice — with document reference",
+        "Input tax credit utilised — broken down by IGST, CGST, SGST/UTGST, Cess",
+        "Output tax payable — broken down by IGST, CGST, SGST/UTGST, Cess",
+        "Output tax paid — by cash and by ITC utilisation",
+        "Input tax credit reversed — with reason and reference",
+        "Closing balance of ITC in Electronic Credit Ledger"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ITC ledger", "output tax ledger", "Rule 56(4)", "tax account", "IGST CGST SGST Cess", "ECL balance"]
+    },
+    {
+      "rule_id": "ACCT-GST-008",
+      "rule_code": "CGST Rule 56(4) — Invoice Register",
+      "title": "Invoice Register — Inward and Outward",
+      "category": "Invoice Register",
+      "description": "Every registered person must maintain a separate register for tax invoices, credit notes, debit notes, delivery challans issued and received.",
+      "outward_supply_register_contents": [
+        "Serial number of invoice",
+        "Date of invoice",
+        "Name and GSTIN of recipient",
+        "Description and HSN/SAC",
+        "Value of supply",
+        "Taxable value",
+        "Tax rate",
+        "CGST, SGST, IGST, UTGST, Cess amount"
+      ],
+      "inward_supply_register_contents": [
+        "Invoice number of supplier",
+        "Date of invoice",
+        "Name and GSTIN of supplier",
+        "Description of goods/services",
+        "Value of supply and taxable value",
+        "CGST, SGST, IGST, Cess charged",
+        "ITC claimed (eligible/ineligible)",
+        "Reverse charge indicator"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["invoice register", "outward supply register", "inward supply register", "Rule 56(4)", "HSN", "GSTIN", "ITC claimed"]
+    },
+    {
+      "rule_id": "ACCT-GST-009",
+      "rule_code": "CGST Rule 56(5)",
+      "title": "Supplier and Recipient Details to Be Maintained",
+      "category": "Counterparty Records",
+      "description": "Every registered person must maintain details of parties from whom goods/services were received and to whom goods/services were supplied.",
+      "required_details": [
+        "(a) Names and complete addresses of suppliers from whom taxable goods/services were received",
+        "(b) Names and complete addresses of persons to whom goods/services were supplied, where required under Chapter VII",
+        "(c) Complete address of premises where goods are stored by the registered person, including goods stored during transit, along with particulars of stock stored"
+      ],
+      "undeclared_premises_penalty": "If taxable goods are found stored at premises not declared under this rule, without valid documents, the proper officer shall determine tax payable on such goods as if they were supplied by the registered person (Rule 56(6))",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 56(5)", "supplier address", "recipient address", "storage premises", "undeclared stock", "deemed supply"]
+    },
+    {
+      "rule_id": "ACCT-GST-010",
+      "rule_code": "CGST Rule 56(7)",
+      "title": "Location of Books of Account",
+      "category": "Record Location Requirement",
+      "description": "Books of account must be maintained at the principal place of business AND at each additional place of business as mentioned in the GST registration certificate.",
+      "conditions": [
+        "Manual books: must be kept at the physical place of business",
+        "Electronic records: must be accessible at every related place of business where they are maintained digitally",
+        "Books include any electronic form of data stored on any electronic device",
+        "If books are found at premises other than those on the registration certificate — presumed to belong to the registered person unless proved otherwise (Rule 56(10))"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["book location", "principal place of business", "additional place", "Rule 56(7)", "registration certificate"]
+    },
+    {
+      "rule_id": "ACCT-GST-011",
+      "rule_code": "CGST Rule 56(8)",
+      "title": "No Erasure or Overwriting in Records; Edit Log for Electronic Records",
+      "category": "Record Integrity",
+      "description": "Entries in registers, accounts, and documents must not be erased, effaced, or overwritten. All corrections must be made by scoring out under attestation.",
+      "conditions": [
+        "Manual records: incorrect entries (other than clerical errors) must be scored out (struck through) under attestation, and the correct entry must be recorded",
+        "Electronic records: a log of every entry edited or deleted must be maintained — equivalent to audit trail",
+        "No entry in any register or account shall be erased or made unreadable",
+        "Clerical corrections may be made without attestation, but corrections of substance require attestation"
+      ],
+      "cross_reference_companies_act": "This mirrors the audit trail requirement under Rule 3(1) of Companies (Accounts) Rules 2014 (as amended): accounting software must have a feature for recording audit trail of every transaction, including date of each change, and the audit trail must not be disabled (effective 01-04-2021)",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 56(8)", "no erasure", "edit log", "audit trail", "attestation", "electronic log", "scored out", "record integrity"]
+    },
+    {
+      "rule_id": "ACCT-GST-012",
+      "rule_code": "CGST Rule 56(9)",
+      "title": "Serial Numbering of Manual Books of Account",
+      "category": "Record Format",
+      "description": "Each volume of books of account maintained manually by a registered person must be serially numbered.",
+      "conditions": [
+        "All volumes (cash book, purchase ledger, sales ledger, day book, etc.) must be serially numbered",
+        "Serial numbering ensures accountability and prevents insertion or removal of pages"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["serial numbering", "manual books", "Rule 56(9)", "volume numbering"]
+    },
+    {
+      "rule_id": "ACCT-GST-013",
+      "rule_code": "CGST Rule 56(12)",
+      "title": "Monthly Production Accounts for Manufacturers",
+      "category": "Manufacturing Records",
+      "description": "Every registered person engaged in manufacturing goods must maintain monthly production accounts.",
+      "required_production_account_contents": [
+        "Quantitative details of raw materials or services used in the manufacture of goods",
+        "Quantitative details of goods manufactured",
+        "Quantitative details of waste or by-products including the scrap and the value thereof"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["production accounts", "manufacturer", "Rule 56(12)", "raw materials", "waste", "by-products", "monthly"]
+    },
+    {
+      "rule_id": "ACCT-GST-014",
+      "rule_code": "CGST Rule 56(13)",
+      "title": "Accounts Specific to Service Providers",
+      "category": "Service Provider Records",
+      "description": "Every registered person providing services must maintain accounts showing quantitative details of goods used in provision of each service.",
+      "required_accounts": [
+        "Quantitative details of goods used in provision of each service",
+        "Details of input services used in provision of each service",
+        "Total amount received for provision of each service — categorised by taxable, exempt, inter-State, intra-State"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["service provider accounts", "Rule 56(13)", "input services", "goods used in services", "service-wise accounts"]
+    },
+    {
+      "rule_id": "ACCT-GST-015",
+      "rule_code": "CGST Rule 56(14)",
+      "title": "Accounts for Agents",
+      "category": "Agent Records",
+      "description": "Every agent must maintain accounts showing the details of authorisations received, goods received and supplied on behalf of each principal, and invoices issued by/on behalf of the agent.",
+      "required_agent_accounts": [
+        "Details of authorisation received from each principal to receive/supply goods or services on their behalf",
+        "Details of goods or services received on behalf of each principal, with value",
+        "Details of goods or services supplied on behalf of each principal, with value",
+        "Details of accounts furnished to each principal",
+        "Tax paid (if any) in connection with the supply made on behalf of the principal",
+        "Invoices issued by the agent on behalf of the principal"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["agent accounts", "Rule 56(14)", "principal agent", "authorisation", "goods on behalf"]
+    },
+    {
+      "rule_id": "ACCT-GST-016",
+      "rule_code": "CGST Rule 56(15) & (16)",
+      "title": "Electronic Records Authentication and Preservation Period",
+      "category": "Electronic Records — Authentication",
+      "description": "Records maintained in electronic form must be authenticated by digital signature and preserved for the prescribed period.",
+      "conditions": [
+        "Electronic records must be authenticated by means of a digital signature",
+        "All accounts, invoices, bills of supply, credit/debit notes, delivery challans must be preserved for the period specified in Section 36 (72 months from due date of annual return)",
+        "Manual records at related places of business; electronic records accessible at all related places",
+        "On demand by proper officer: electronic records must be produced in hard copy or electronically readable format (Rule 57(2))"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["digital signature", "electronic records authentication", "preservation", "Rule 56(15)", "Rule 56(16)", "hard copy on demand"]
+    },
+    {
+      "rule_id": "ACCT-GST-017",
+      "rule_code": "CGST Rule 56(17) & (18)",
+      "title": "On-Demand Production of Books; Legal Books Must Also Be Maintained",
+      "category": "Records Accessibility",
+      "description": "Every registered person must produce their books of account on demand by the proper officer, and must also maintain any books required under other applicable laws.",
+      "conditions": [
+        "Rule 56(17): Persons handling goods on behalf of registered persons (carriers, clearing agents) must maintain true and correct records and produce on demand",
+        "Rule 56(18): Every registered person must, on demand, produce the books of accounts which he is required to maintain under any law for the time being in force (not just GST law) — includes Companies Act books, Income Tax books, etc.",
+        "Proper officer has the right to inspect books during investigation, audit, or assessment"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["on demand production", "Rule 56(18)", "all statutory books", "inspection", "carrier records", "clearing agent"]
+    },
+    {
+      "rule_id": "ACCT-GST-018",
+      "rule_code": "CGST Rule 57",
+      "title": "Generation and Maintenance of Electronic Records",
+      "category": "Electronic Records — Technical Requirements",
+      "description": "Specific technical requirements for registered persons who maintain books of account in electronic form.",
+      "requirements": [
+        "(1) Proper electronic backup must be maintained and preserved so that records can be restored within a reasonable time if destroyed by accident or natural causes",
+        "(2) On demand, registered person must produce records or documents duly authenticated, in hard copy or electronically readable format",
+        "(3) Where accounts/records are stored electronically, the registered person must provide on demand: (a) details of such files; (b) passwords of such files; (c) explanation for codes used; (d) any other information required for access; and (e) a sample copy in print form of the information stored",
+        "Backup media: offline/cloud backup acceptable provided it is accessible and restorable",
+        "Format: records must remain in original format or a format that accurately represents the original"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 57", "electronic records", "backup", "restore", "password access", "file codes", "hard copy on demand", "electronically readable"]
+    },
+    {
+      "rule_id": "ACCT-GST-019",
+      "rule_code": "CGST Rule 58",
+      "title": "Records to Be Maintained by Transporters and Warehouse Operators — Enrolment",
+      "category": "Third-Party Custodian Records — GST Enrolment",
+      "description": "Owners/operators of warehouses, godowns, or storage places, and transporters who are not registered under GST but are required to maintain records, must enrol on the GST portal.",
+      "conditions": [
+        "Persons required to maintain records under Section 35(2) but who are not registered: must submit details in FORM GST ENR-01 electronically on the GST Common Portal",
+        "A unique enrolment number is generated on submission and communicated to the person",
+        "Transporter registered in more than one State/UT: gets a common enrolment number applicable across all States",
+        "Transporters must maintain: records of goods transported, delivered, and stored in transit with GSTIN of consigner and consignee for each branch",
+        "Warehouse operators must maintain: period of goods storage, dispatch, movement, receipt and disposal particulars"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 58", "FORM GST ENR-01", "transporter enrolment", "warehouse registration", "unregistered custodians", "common enrolment number"]
+    },
+    {
+      "rule_id": "ACCT-CA-001",
+      "rule_code": "Companies Act 2013, Section 128(1)",
+      "title": "Companies Act: Accrual Basis + Double Entry — Mandatory",
+      "category": "Companies Act — Mandatory Accounting Method",
+      "description": "Every company must prepare and maintain books of account on accrual basis using the double-entry system of accounting, giving a true and fair view of the state of affairs.",
+      "conditions": [
+        "Accrual basis: revenues and expenses recognised when they occur, not when cash is received/paid",
+        "Double-entry system: every debit has a corresponding credit; trial balance must tally",
+        "Books must cover: transactions at the registered office AND all branch offices",
+        "Books may be kept at another location in India (not the registered office) after filing Form AOC-5 with ROC within 7 days of decision",
+        "If books are kept outside India in branches: summarised returns must be sent to registered office at quarterly intervals"
+      ],
+      "applicable_to": "All companies under the Companies Act 2013, including foreign companies operating in India",
+      "penalty": "Liable persons (MD, WTD in charge of finance, CFO, or designated person) — fine not less than Rs. 50,000 up to Rs. 5,00,000",
+      "effective_date": "01-04-2014",
+      "official_source": "https://www.indiacode.nic.in",
+      "tags": ["accrual basis", "double entry", "true and fair view", "Companies Act", "Section 128(1)", "AOC-5", "branch office"]
+    },
+    {
+      "rule_id": "ACCT-CA-002",
+      "rule_code": "Companies Act 2013, Section 128(5)",
+      "title": "Companies Act: 8-Year Retention of Books of Account",
+      "category": "Companies Act — Record Retention",
+      "description": "Books of account, other books, papers, and vouchers relevant to entries in books must be kept in good order for not less than 8 financial years immediately preceding the current financial year.",
+      "conditions": [
+        "Minimum 8 financial years of records must be retained",
+        "If company is less than 8 years old: retain since incorporation",
+        "If Central Government orders investigation under Chapter XIV: retain for such longer period as directed",
+        "Applies to physical and electronic records",
+        "Electronic records: backup must be kept on servers physically located in India"
+      ],
+      "reconciliation_with_gst": "GST requires 72 months (6 years) from due date of annual return; Companies Act requires 8 years from current year. Companies should follow the more stringent requirement = 8 years minimum (for records common to both).",
+      "effective_date": "01-04-2014",
+      "official_source": "https://www.indiacode.nic.in",
+      "tags": ["8 years", "retention", "Companies Act", "Section 128(5)", "vouchers", "investigation"]
+    },
+    {
+      "rule_id": "ACCT-CA-003",
+      "rule_code": "Companies (Accounts) Rules 2014, Rule 3",
+      "title": "Audit Trail in Accounting Software — Mandatory from 01-04-2021",
+      "category": "Electronic Records — Audit Trail",
+      "description": "Companies maintaining books of account in electronic mode using accounting software must ensure the software has an audit trail feature that records every transaction with edit log, and this audit trail must not be disabled.",
+      "requirements": [
+        "Accounting software must have a feature for recording an audit trail (edit log) for every transaction",
+        "Edit log must capture: date of each change, nature of change, user making the change",
+        "Audit trail must be maintained for the entire financial year",
+        "Audit trail cannot be disabled at any time — enabling/disabling is itself a recordable event",
+        "Cloud-based software: provider must ensure audit trail feature is always active",
+        "Back-up of electronic books must be kept on servers physically located in India on a periodic basis",
+        "Disclosure in Annual Report: company must disclose (in Board Report or notes to accounts) whether accounting software used has audit trail feature and whether it was operational throughout the year"
+      ],
+      "auditor_reporting_requirement": "Auditors must comment on whether the audit trail feature was enabled and operated throughout the year in their audit report — per Companies (Audit and Auditors) Rules 2014 as amended",
+      "effective_date": "01-04-2021",
+      "amendment_ref": "Companies (Accounts) Amendment Rules, 2021; Companies (Accounts) Fourth Amendment Rules, 2022",
+      "official_source": "https://www.mca.gov.in",
+      "tags": ["audit trail", "edit log", "accounting software", "Companies Act", "Rule 3", "India server backup", "auditor report", "cloud software"]
+    },
+    {
+      "rule_id": "ACCT-CA-004",
+      "rule_code": "Companies Act 2013, Section 128(3)",
+      "title": "Director Inspection Rights for Books of Account",
+      "category": "Record Access — Directors",
+      "description": "Books of account maintained in India must be open for inspection by any director of the company during business hours.",
+      "conditions": [
+        "Any director may inspect books during business hours at the principal place or wherever books are maintained",
+        "To inspect books of a subsidiary company: only by a person specifically authorised by a Board resolution of the holding company",
+        "Officers and employees must render all reasonable assistance to the person inspecting",
+        "Improper refusal to allow inspection: punishable under Companies Act"
+      ],
+      "effective_date": "01-04-2014",
+      "official_source": "https://www.indiacode.nic.in",
+      "tags": ["director inspection", "Section 128(3)", "business hours", "subsidiary inspection", "board resolution"]
+    }
+  ]
+}

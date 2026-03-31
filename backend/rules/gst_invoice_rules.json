@@ -1,0 +1,657 @@
+{
+  "_metadata": {
+    "dataset_name": "GST Invoice Rules — Comprehensive",
+    "source_authority": "Central Board of Indirect Taxes and Customs (CBIC)",
+    "governing_act": "Central Goods and Services Tax Act, 2017",
+    "governing_rules": "CGST Rules 2017 — Chapter VI (Rules 46–55A); CGST Act Sections 31–34; ICAI Handbook on Invoicing under GST (June 2025 edition)",
+    "official_url": "https://cbic-gst.gov.in",
+    "last_amended": "Notification No. 20/2024-Central Tax dated 08.10.2024 (w.e.f. 01.11.2024)",
+    "version": "2.0",
+    "schema_version": "1.0",
+    "total_rules": 27,
+    "tags": ["GST", "invoice", "CBIC", "India", "tax", "CGST", "Chapter VI"]
+  },
+  "rules": [
+    {
+      "rule_id": "GST-ACT-001",
+      "rule_code": "CGST Act Section 31(1)",
+      "title": "Tax Invoice for Supply of Goods — Time of Issue",
+      "category": "Invoice Issuance — Goods",
+      "description": "A registered person supplying taxable goods must issue a tax invoice before or at the time of removal of goods (where supply involves movement) or before or at the time of delivery or making available to recipient (where supply does not involve movement).",
+      "conditions": [
+        "Before or at time of removal of goods, where supply involves movement of goods",
+        "Before or at time of delivery or making available to recipient, where supply does not involve movement",
+        "'Removal' means goods dispatched by supplier or collected by recipient",
+        "For exports: invoice must be issued before or at the time of removal since exports involve movement of goods",
+        "For continuous supply of goods: invoice at time of each statement of accounts or each payment, whichever is earlier",
+        "For goods sent on approval/sale-or-return: invoice at time when supply becomes known or 6 months from removal, whichever is earlier"
+      ],
+      "penalty_for_non_compliance": "Section 122 of CGST Act — fine up to Rs. 10,000 or tax evaded, whichever is higher, per invoice; Section 132 for prosecution",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["time of invoice", "goods", "removal", "delivery", "continuous supply", "sale or return"]
+    },
+    {
+      "rule_id": "GST-ACT-002",
+      "rule_code": "CGST Act Section 31(2)",
+      "title": "Tax Invoice for Supply of Services — Time of Issue",
+      "category": "Invoice Issuance — Services",
+      "description": "A registered person supplying taxable services must issue a tax invoice before or after supply of service but within 30 days from date of supply (45 days for banking/insurance/NBFC).",
+      "conditions": [
+        "General: within 30 days from date of supply of service",
+        "Banking companies, insurance companies, NBFCs: within 45 days from date of supply",
+        "Telecom operators or notified inter-company supplies between distinct persons: may issue invoice before or at time of recording in books, or before expiry of the quarter during which supply was made",
+        "For continuous supply of services: on or before the due date of payment as per contract, where payment is ascertainable; otherwise on or before each payment received",
+        "For cessation of contract before completion: at the time services cease, to the extent of supply made"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["time of invoice", "services", "30 days", "45 days", "banking", "NBFC", "continuous supply", "cessation"]
+    },
+    {
+      "rule_id": "GST-ACT-003",
+      "rule_code": "CGST Act Section 31(3)(f) + Rule 47A",
+      "title": "Self-Invoice by Recipient Under Reverse Charge",
+      "category": "Reverse Charge Invoice",
+      "description": "Where a registered person receives supplies from an unregistered person and is liable to pay GST under RCM (Section 9(3) or 9(4)), the recipient shall issue a self-invoice within 30 days from the date of receipt of supply (Rule 47A, inserted w.e.f. 01.11.2024).",
+      "conditions": [
+        "Applicable where supplier is unregistered and supply is covered under Section 9(3) or Section 9(4)",
+        "Self-invoice must be issued within 30 days from the date of receipt of goods or services",
+        "For registered supplier on Section 9(3) supplies: supplier issues invoice but must note 'tax payable on reverse charge'",
+        "Self-invoice follows same format as Rule 46 (all mandatory fields of a tax invoice)",
+        "Time of supply under RCM for goods is earlier of: date of receipt; date of payment in books; or 31 days from date of supplier's invoice/document",
+        "Self-invoice is the valid document for claiming ITC under Section 16 read with Rule 36(1)(b) for RCM supplies from unregistered persons"
+      ],
+      "effective_date": "01-07-2017 (Section 31(3)(f)); Rule 47A effective 01-11-2024",
+      "amendment_ref": "Notification No. 20/2024-Central Tax dated 08.10.2024",
+      "official_source": "https://cbic-gst.gov.in; ICAI Handbook on Invoicing under GST, June 2025",
+      "tags": ["self-invoice", "reverse charge", "RCM", "Section 9(3)", "Section 9(4)", "unregistered supplier", "30 days", "Rule 47A"]
+    },
+    {
+      "rule_id": "GST-ACT-004",
+      "rule_code": "CGST Act Section 31A",
+      "title": "Facility of Digital Payment to Recipient",
+      "category": "Digital Payment on Invoice",
+      "description": "The Government may prescribe a class of registered persons who must provide modes of electronic payment to the recipient of supply of goods or services and give the recipient the option to make payment accordingly.",
+      "conditions": [
+        "Applies to notified class of registered persons",
+        "The registered person must offer electronic payment modes as prescribed",
+        "Recipient must be given the option — it is not mandatory for the recipient to pay electronically"
+      ],
+      "effective_date": "01-01-2020",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["digital payment", "electronic payment", "invoice", "recipient option"]
+    },
+    {
+      "rule_id": "GST-ACT-005",
+      "rule_code": "CGST Act Section 32",
+      "title": "Prohibition on Unauthorized Collection of Tax",
+      "category": "Unauthorized Tax Collection",
+      "description": "Only a registered person can collect tax on a supply in accordance with GST law. Any unauthorized collection of tax is prohibited.",
+      "conditions": [
+        "An unregistered person cannot collect GST from recipients",
+        "A registered person cannot collect GST in excess of the rate specified under the Act",
+        "Charging GST on a nil-rated or exempt supply constitutes unauthorized collection",
+        "Tax collected in excess must be deposited with the Government"
+      ],
+      "penalty_for_non_compliance": "Section 122 of CGST Act",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["unauthorized tax", "unregistered", "excess tax", "Section 32"]
+    },
+    {
+      "rule_id": "GST-ACT-006",
+      "rule_code": "CGST Act Section 33",
+      "title": "Amount of Tax to Be Indicated in Tax Invoice",
+      "category": "Tax Display on Invoice",
+      "description": "The amount of tax charged on supply must be specifically indicated in the tax invoice in all cases. Where a registered person making a taxable supply does not charge tax, they are still required to issue a tax invoice or bill of supply.",
+      "conditions": [
+        "Tax amount (CGST, SGST, IGST, UTGST, Cess separately) must be explicitly shown on the invoice",
+        "The supplier cannot absorb or merge tax in the gross price without showing it separately on the invoice",
+        "Exception: where a tax invoice is not required to be issued (e.g., supplies less than Rs. 200 to unregistered persons in certain conditions)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["tax amount display", "CGST", "SGST", "IGST", "Cess", "invoice disclosure"]
+    },
+    {
+      "rule_id": "GST-ACT-007",
+      "rule_code": "CGST Act Section 34",
+      "title": "Credit Notes and Debit Notes",
+      "category": "Credit Note / Debit Note",
+      "description": "Registered persons may issue credit notes where tax charged exceeds tax payable, or where goods are returned or deficient. Debit notes must be issued where tax charged is less than tax payable.",
+      "credit_note_conditions": [
+        "Tax charged in the tax invoice exceeds the tax payable in respect of supply",
+        "Goods supplied are returned by the recipient",
+        "Goods or services supplied are found to be deficient",
+        "Credit note to be declared in the return for the month in which it was issued",
+        "Time limit for issuing credit note: no later than September 30 following the end of the financial year in which the supply was made OR the date of filing the relevant annual return, whichever is earlier",
+        "Credit note must contain the details prescribed under Rule 53 including original invoice number"
+      ],
+      "debit_note_conditions": [
+        "Tax charged in the tax invoice is less than the tax payable",
+        "Taxable value declared in invoice is less than actual value of supply",
+        "Debit note must be declared in the return for the month in which it was issued",
+        "No time limit prescribed for issuing debit notes (only credit notes have a time limit)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["credit note", "debit note", "September 30", "time limit", "deficient goods", "goods return", "Section 34"]
+    },
+    {
+      "rule_id": "GST-INV-001",
+      "rule_code": "CGST Rule 46",
+      "title": "Mandatory Particulars on a Tax Invoice",
+      "category": "Invoice Field Requirements",
+      "description": "Subject to Rule 54, a tax invoice under Section 31 must contain the following mandatory particulars.",
+      "mandatory_fields": [
+        "(a) Name, address, and GSTIN of the supplier",
+        "(b) Consecutive serial number not exceeding 16 characters, in one or multiple series, containing alphabets/numerals/special characters (hyphen, slash), unique for a financial year",
+        "(c) Date of issue of the invoice",
+        "(d) Name, address and GSTIN/UIN of the recipient if registered",
+        "(e) Name and address of recipient, delivery address, State name and State code if recipient is unregistered and taxable value >= Rs. 50,000",
+        "(f) HSN code of goods or SAC code of services as notified",
+        "(g) Description of goods or services",
+        "(h) Quantity (in case of goods) and unit/unique quantity code",
+        "(i) Total value of supply",
+        "(j) Taxable value taking into account discount or abatement",
+        "(k) Rate of tax — CGST, SGST, IGST, UTGST, Cess",
+        "(l) Amount of tax charged — CGST, SGST, IGST, UTGST, Cess",
+        "(m) Place of supply with State name, for inter-State supplies",
+        "(n) Address of delivery where different from place of supply",
+        "(o) Whether tax is payable on reverse charge basis",
+        "(p) Signature or digital signature of supplier or authorised representative",
+        "(q) QR code with embedded IRN, where invoice issued under Rule 48(4) (e-invoicing)",
+        "(r) Declaration that invoice is not required under Rule 48(4), where taxpayer's AATO exceeds notified threshold but is exempt from e-invoicing"
+      ],
+      "hsn_digit_requirements": {
+        "source": "Notification No. 78/2020-Central Tax dated 15.10.2020",
+        "requirements": [
+          "AATO up to Rs. 5 Crore in preceding FY: 4-digit HSN on B2B invoices; optional on B2C",
+          "AATO above Rs. 5 Crore in preceding FY: 6-digit HSN on all invoices (B2B and B2C)"
+        ]
+      },
+      "invoice_copies_goods": ["ORIGINAL FOR RECIPIENT", "DUPLICATE FOR TRANSPORTER", "TRIPLICATE FOR SUPPLIER"],
+      "invoice_copies_services": ["ORIGINAL FOR RECIPIENT", "DUPLICATE FOR SUPPLIER"],
+      "invoice_below_rs200": "A registered person may not issue a tax invoice if value of goods/services is less than Rs. 200 and the recipient is unregistered and does not require such invoice — a consolidated invoice may be issued at end of day for all such supplies",
+      "penalty_for_non_compliance": "Section 122 of CGST Act — up to Rs. 10,000 or tax evaded, whichever is higher, per invoice; Section 132 for prosecution",
+      "effective_date": "01-07-2017",
+      "last_amended": "01-11-2024",
+      "amendment_ref": "Notification No. 20/2024-Central Tax dated 08.10.2024",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["mandatory fields", "GSTIN", "HSN", "SAC", "serial number", "QR code", "IRN", "reverse charge", "16 characters", "Rule 46"]
+    },
+    {
+      "rule_id": "GST-INV-002",
+      "rule_code": "CGST Rule 46A",
+      "title": "Invoice-Cum-Bill of Supply",
+      "category": "Combined Invoice",
+      "description": "Where a registered person makes a supply of both taxable and exempted goods/services to an unregistered person, a single document — invoice-cum-bill of supply — may be issued covering both taxable and exempt supplies.",
+      "conditions": [
+        "Applicable only for supplies to unregistered persons",
+        "Must cover both a taxable supply (normally requiring a tax invoice) and an exempt supply (normally requiring a bill of supply)",
+        "Single document serves the purpose of both tax invoice and bill of supply",
+        "All mandatory fields of Rule 46 (for the taxable portion) must be present",
+        "All mandatory fields of Rule 49 (for the exempt portion) must be present"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["invoice cum bill of supply", "mixed supply", "unregistered recipient", "exempt supply", "taxable supply", "Rule 46A"]
+    },
+    {
+      "rule_id": "GST-INV-003",
+      "rule_code": "CGST Rule 47",
+      "title": "Time Limit for Issuing Tax Invoice — Services",
+      "category": "Invoice Timeliness — Services",
+      "description": "The time limit for issuing a tax invoice for supply of taxable services.",
+      "conditions": [
+        "General: within 30 days from the date of supply of service",
+        "Banking companies, insurance companies, NBFCs: within 45 days from date of supply",
+        "Telecom operators and other notified inter-company supplies (distinct persons under Section 25): may issue before or at time of recording in books or before expiry of quarter during which supply was made",
+        "Does NOT apply where recipient is required to issue the invoice (covered by Rule 47A)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["time limit", "service invoice", "30 days", "45 days", "banking", "NBFC", "telecom", "Rule 47"]
+    },
+    {
+      "rule_id": "GST-INV-004",
+      "rule_code": "CGST Rule 47A",
+      "title": "Time Limit for Invoice Where Recipient Issues (RCM Self-Invoice)",
+      "category": "Reverse Charge Invoice Timeliness",
+      "description": "Inserted w.e.f. 01.11.2024. Notwithstanding Rule 47, where invoice is required to be issued under Section 31(3)(f) by a registered person liable to pay tax under Section 9(3) or 9(4), the invoice must be issued within 30 days from date of receipt of supply.",
+      "conditions": [
+        "Applies to registered persons receiving supplies attracting GST under RCM (Section 9(3) or 9(4))",
+        "30-day limit runs from date of receipt of goods or services",
+        "Overrides the general timelimit under Rule 47 for this scenario",
+        "Failure to issue within 30 days means the invoice is non-compliant and ITC may be denied"
+      ],
+      "effective_date": "01-11-2024",
+      "amendment_ref": "Notification No. 20/2024-Central Tax dated 08.10.2024",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Rule 47A", "RCM", "self-invoice", "reverse charge", "30 days", "Section 9(3)", "Section 9(4)"]
+    },
+    {
+      "rule_id": "GST-INV-005",
+      "rule_code": "CGST Rule 48(1) & (2)",
+      "title": "Manner of Issuing Invoice — Physical Invoice (Non-E-Invoice)",
+      "category": "Invoice Issuance Manner",
+      "description": "Invoices not covered by the e-invoice mandate under Rule 48(4) must be issued in the manner specified under Rule 48(1) and (2).",
+      "conditions": [
+        "For goods: invoice to be prepared in triplicate — ORIGINAL FOR RECIPIENT, DUPLICATE FOR TRANSPORTER, TRIPLICATE FOR SUPPLIER",
+        "For services: invoice to be prepared in duplicate — ORIGINAL FOR RECIPIENT, DUPLICATE FOR SUPPLIER",
+        "Each copy must be clearly marked with the designation",
+        "Invoice may be issued in physical or electronic format (PDF, email etc.) provided the content complies with Rule 46"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["invoice copies", "triplicate", "duplicate", "goods invoice", "service invoice", "Rule 48"]
+    },
+    {
+      "rule_id": "GST-INV-006",
+      "rule_code": "CGST Rule 48(4) & (5)",
+      "title": "Manner of Issuing Invoice — E-Invoice via IRP",
+      "category": "E-Invoice Mandate",
+      "description": "Notified registered persons must upload invoice particulars to the IRP in FORM GST INV-01 and obtain an IRN before issuing the invoice. Any invoice issued without a valid IRN by a notified person is not a valid invoice under Rule 48(5).",
+      "conditions": [
+        "Applicable to registered persons with AATO exceeding the notified threshold (currently Rs. 5 Crore as of 01-08-2023 per Notification No. 10/2023-CT)",
+        "Invoice data must be uploaded to IRP in FORM GST INV-01 JSON format",
+        "IRP validates the data and issues a digitally signed JSON, IRN (64-character SHA-256 hash), and QR code",
+        "IRN and QR code must be embedded/printed on the invoice issued to the recipient",
+        "Invoice without valid IRN from notified taxpayer is deemed invalid — recipient loses ITC eligibility",
+        "From 01-04-2025: invoices must be reported to IRP within 30 days of issue (for taxpayers with AATO >= Rs. 10 Crore) per GSTN Advisory dated 05-11-2024",
+        "Cancellation of IRN: must be done within 24 hours on IRP; after 24 hours, amendment required in GSTR-1"
+      ],
+      "irn_hash_inputs": ["Supplier GSTIN", "Invoice/Document Number", "Financial Year (YYYY-YY)", "Document Type (INV/CRN/DBN)"],
+      "effective_date": "01-10-2020",
+      "last_amended": "01-08-2023",
+      "amendment_ref": "Notification No. 10/2023-CT dated 26-05-2023",
+      "official_source": "https://cbic-gst.gov.in; https://einvoice1.gst.gov.in",
+      "tags": ["e-invoice", "IRP", "IRN", "Rule 48(4)", "Rule 48(5)", "FORM GST INV-01", "QR code", "AATO", "cancellation"]
+    },
+    {
+      "rule_id": "GST-INV-007",
+      "rule_code": "CGST Rule 48(6)",
+      "title": "Exemptions from E-Invoice Mandate",
+      "category": "E-Invoice Exemptions",
+      "description": "The following categories of registered persons are exempt from the e-invoice requirement under Rule 48(4) even where their AATO exceeds the notified threshold.",
+      "exempt_categories": [
+        "Banking companies and financial institutions including NBFCs",
+        "Insurance companies",
+        "Goods Transport Agencies (GTAs)",
+        "Suppliers providing passenger transport services",
+        "Suppliers of services by way of admission to exhibition of cinematograph films on multiplex screens",
+        "Special Economic Zone (SEZ) Units (Note: SEZ Developers are NOT exempt)",
+        "Government departments and local authorities (Notification No. 23/2021-CT)",
+        "Persons registered under Rule 14 of CGST Rules (OIDAR service providers)"
+      ],
+      "effective_date": "21-03-2020",
+      "amendment_ref": "Notification No. 23/2021-CT; Notification No. 01/2022-CT",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["e-invoice exemption", "banking", "NBFC", "GTA", "SEZ unit", "government", "OIDAR", "Rule 48(6)"]
+    },
+    {
+      "rule_id": "GST-INV-008",
+      "rule_code": "CGST Rule 49",
+      "title": "Bill of Supply",
+      "category": "Bill of Supply",
+      "description": "A registered person supplying exempt goods/services or paying tax under composition scheme shall issue a bill of supply instead of a tax invoice.",
+      "mandatory_fields": [
+        "Name, address and GSTIN of the supplier",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN/UIN of recipient (if registered)",
+        "HSN code of goods or accounting code for services",
+        "Description of goods or services",
+        "Value of supply after taking into account discount or abatement",
+        "Signature or digital signature of supplier or authorised representative"
+      ],
+      "key_conditions": [
+        "Tax rate and amount are NOT shown (since there is no tax on exempt supply or composition dealer supplies)",
+        "Composition dealer must mention 'composition taxable person, not eligible to collect tax on supplies' at the top of the bill of supply",
+        "Bill of supply is not required for supplies below Rs. 200 to unregistered persons unless requested"
+      ],
+      "applicable_to": "Composition dealers; suppliers of exempt goods/services",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["bill of supply", "composition scheme", "exempt supply", "no tax", "Rule 49"]
+    },
+    {
+      "rule_id": "GST-INV-009",
+      "rule_code": "CGST Rule 50",
+      "title": "Receipt Voucher",
+      "category": "Advance Receipt",
+      "description": "Where a registered person receives advance payment for any future supply, a receipt voucher must be issued at the time of receiving the advance.",
+      "mandatory_fields": [
+        "Name, address and GSTIN of the supplier",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN/UIN of recipient (if registered)",
+        "Description of goods or services",
+        "Amount of advance taken",
+        "Rate of tax (CGST, SGST, IGST, UTGST, Cess)",
+        "Amount of tax charged",
+        "Place of supply with State name and code for inter-State supply",
+        "Whether tax is payable on reverse charge basis",
+        "Signature or digital signature of supplier or authorised representative"
+      ],
+      "key_conditions": [
+        "Mandatory for all advance receipts for supply of services — GST is payable on advance received for services",
+        "NOT applicable for advance for supply of goods (GST not payable on advance for goods per Notification No. 66/2017-CT)",
+        "If tax rate or nature of supply (goods/services) is not determinable, rate of 18% is used for receipt voucher",
+        "A tax invoice must be issued on actual supply and receipt voucher must be reconciled",
+        "If no supply is made after advance receipt, a Refund Voucher (Rule 51) must be issued"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["receipt voucher", "advance payment", "services advance", "GST on advance", "Rule 50"]
+    },
+    {
+      "rule_id": "GST-INV-010",
+      "rule_code": "CGST Rule 51",
+      "title": "Refund Voucher",
+      "category": "Advance Refund",
+      "description": "Where a registered person has issued a receipt voucher for an advance but subsequently no supply is made and no tax invoice is issued, a refund voucher must be issued to refund the advance.",
+      "mandatory_fields": [
+        "Name, address and GSTIN of the supplier",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN/UIN of the recipient",
+        "Serial number and date of corresponding receipt voucher",
+        "Description of goods or services for which advance was received",
+        "Amount of refund made",
+        "Rate of tax (CGST, SGST, IGST, UTGST, Cess)",
+        "Amount of tax refunded",
+        "Place of supply with State name and State code for inter-State supply",
+        "Signature or digital signature of supplier or authorised representative"
+      ],
+      "key_conditions": [
+        "Must be issued when advance is refunded and supply has not been made",
+        "Must reference the original receipt voucher number and date",
+        "GST refunded through refund voucher can be adjusted in GSTR-1 return"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["refund voucher", "advance refund", "no supply", "receipt voucher reference", "Rule 51"]
+    },
+    {
+      "rule_id": "GST-INV-011",
+      "rule_code": "CGST Rule 52",
+      "title": "Payment Voucher (Reverse Charge)",
+      "category": "RCM Payment Document",
+      "description": "A registered person who is liable to pay tax under reverse charge mechanism (Section 9(3) or 9(4)) must issue a payment voucher at the time of making payment to the supplier.",
+      "mandatory_fields": [
+        "Name, address and GSTIN of the supplier (if registered) / details of unregistered supplier",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN of the recipient (i.e., the person issuing the voucher, who is the registered person paying tax under RCM)",
+        "Description of goods or services",
+        "Amount paid",
+        "Rate of tax (CGST, SGST, IGST, UTGST, Cess)",
+        "Amount of tax payable",
+        "Place of supply with State name and State code",
+        "Signature or digital signature"
+      ],
+      "key_conditions": [
+        "Issued by the recipient (buyer) who is paying GST under RCM",
+        "Issued at the time of making payment to the supplier",
+        "If no payment is made (e.g., goods received but no payment yet), a Self-Invoice under Section 31(3)(f) is issued within 30 days of receipt (Rule 47A)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["payment voucher", "reverse charge", "RCM", "Section 9(3)", "Section 9(4)", "recipient payment", "Rule 52"]
+    },
+    {
+      "rule_id": "GST-INV-012",
+      "rule_code": "CGST Rule 53",
+      "title": "Revised Tax Invoice and Credit or Debit Notes — Mandatory Fields",
+      "category": "Credit/Debit Note Fields",
+      "description": "Revised tax invoices (issued by newly registered persons for supplies made before registration) and credit/debit notes must contain the prescribed mandatory particulars under Rule 53.",
+      "revised_invoice_conditions": [
+        "A revised tax invoice may be issued by a registered person against invoices already issued for the period between effective date of registration and grant of registration",
+        "Must be issued within 1 month from date of issuance of certificate of registration",
+        "Consolidated revised invoices may be issued for all taxable supplies to an unregistered recipient within a State/UT"
+      ],
+      "mandatory_fields_credit_debit_note": [
+        "Name, address and GSTIN of the supplier",
+        "Nature of document (Credit Note/Debit Note)",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN/UIN of the recipient",
+        "Serial number and date of the corresponding original tax invoice / bill of supply",
+        "Taxable value of goods or services, rate of tax, and the amount of tax credited or debited",
+        "Signature or digital signature"
+      ],
+      "credit_note_time_limit": "Must be issued no later than: September 30 following the end of the financial year in which the original supply was made, OR the date of filing the relevant annual return — whichever is earlier",
+      "debit_note_time_limit": "No time limit prescribed",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["credit note", "debit note", "revised invoice", "September 30 limit", "Rule 53", "mandatory fields"]
+    },
+    {
+      "rule_id": "GST-INV-013",
+      "rule_code": "CGST Rule 54(1)",
+      "title": "Tax Invoice — Banking Companies, NBFCs, Insurance (Special Cases)",
+      "category": "Special Invoice — Banking",
+      "description": "Banking companies, financial institutions, and NBFCs may issue any document in lieu of a tax invoice — the document need not contain all the fields prescribed under Rule 46.",
+      "conditions": [
+        "Any document issued by a banking company, financial institution, or NBFC in lieu of a tax invoice is acceptable",
+        "The document must contain the name and address of the recipient and the amount of consideration",
+        "Such documents are valid for claiming ITC by recipients under Rule 36(1)(c)"
+      ],
+      "applicable_to": "Banking companies, NBFCs, financial institutions",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["banking invoice", "NBFC", "financial institution", "special invoice", "any document", "Rule 54(1)"]
+    },
+    {
+      "rule_id": "GST-INV-014",
+      "rule_code": "CGST Rule 54(3)",
+      "title": "Tax Invoice — Goods Transport Agency (GTA)",
+      "category": "Special Invoice — GTA",
+      "description": "A Goods Transport Agency (GTA) must issue a tax invoice or a consignment note (in lieu of invoice) for its services.",
+      "mandatory_fields_consignment_note": [
+        "Gross weight of consignment",
+        "Name of consigner and consignee",
+        "Registration number of goods carriage in which goods are transported",
+        "Details of goods transported (description, quantity, value)",
+        "Place of origin and destination",
+        "Person liable for paying tax — consigner, consignee, or GTA"
+      ],
+      "key_conditions": [
+        "If GTA is registered under forward charge (opted): issues a GST-compliant tax invoice",
+        "If GTA is under reverse charge: recipient pays GST; GTA issues a consignment note",
+        "From FY 2022-23: GTAs may opt to pay GST under forward charge (6% or 12%) instead of being covered under RCM"
+      ],
+      "applicable_to": "Goods Transport Agencies",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["GTA", "consignment note", "goods transport", "reverse charge GTA", "forward charge GTA", "Rule 54(3)"]
+    },
+    {
+      "rule_id": "GST-INV-015",
+      "rule_code": "CGST Rule 54(4)",
+      "title": "Tax Invoice — Passenger Transport Services",
+      "category": "Special Invoice — Passenger Transport",
+      "description": "A registered person supplying passenger transport services may issue a ticket or any other document as a tax invoice — the ticket may serve as the invoice.",
+      "conditions": [
+        "The ticket may be issued without containing the name and address of the recipient",
+        "GSTIN of recipient is not required on a passenger transport ticket",
+        "All other details — route, date, rate of tax, tax amount — must be present",
+        "Applicable to airlines, bus operators, railways (private), cab/taxi aggregators under GST"
+      ],
+      "applicable_to": "Passenger transport service providers",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["passenger transport", "ticket as invoice", "airlines", "bus", "cab", "Rule 54(4)"]
+    },
+    {
+      "rule_id": "GST-INV-016",
+      "rule_code": "CGST Rule 54(5)",
+      "title": "Tax Invoice — Multiplex / Cinematograph Film Admission",
+      "category": "Special Invoice — Entertainment",
+      "description": "A registered person supplying services by way of admission to exhibition of cinematograph films on multiplex or other screens may issue a ticket as a tax invoice.",
+      "conditions": [
+        "The ticket may be the invoice for GST purposes",
+        "Ticket must contain GST amount or GST-inclusive price indication"
+      ],
+      "applicable_to": "Multiplex operators and cinematograph film exhibitors",
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["cinema", "multiplex", "ticket invoice", "entertainment", "Rule 54(5)"]
+    },
+    {
+      "rule_id": "GST-INV-017",
+      "rule_code": "CGST Rule 54(1A)",
+      "title": "Tax Invoice — ISD (Input Service Distributor)",
+      "category": "ISD Invoice",
+      "description": "An Input Service Distributor (ISD) must issue an ISD invoice or an ISD credit note for distributing input tax credit to its recipient units.",
+      "mandatory_fields": [
+        "Name, address and GSTIN of the ISD",
+        "Consecutive serial number not exceeding 16 characters",
+        "Date of issue",
+        "Name, address and GSTIN of the recipient to whom credit is distributed",
+        "Amount of credit distributed"
+      ],
+      "key_conditions": [
+        "ISD must distribute ITC in the same month in which it is received (Rule 39(1)(a))",
+        "Eligible and ineligible ITC must be distributed separately (Rule 39(1)(b))",
+        "IGST, CGST, SGST/UTGST must be distributed separately",
+        "ISD cannot distribute more credit than it has received",
+        "From 01-04-2025: New ISD mechanism under amended Section 2(61) and Section 20 — ISD can also distribute ITC on inter-branch transactions (Finance Act 2024 amendment)"
+      ],
+      "applicable_to": "Input Service Distributors",
+      "effective_date": "01-07-2017",
+      "last_amended": "01-04-2025",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["ISD", "input service distributor", "ITC distribution", "ISD invoice", "GSTR-6", "Rule 54(1A)", "Rule 39"]
+    },
+    {
+      "rule_id": "GST-INV-018",
+      "rule_code": "CGST Rule 55",
+      "title": "Delivery Challan — Transportation Without Invoice",
+      "category": "Delivery Challan",
+      "description": "Where goods are transported for reasons other than supply, a delivery challan must be issued. A tax invoice is issued only when supply is concluded.",
+      "applicable_situations": [
+        "Supply of liquid gas where quantity at time of removal is not known",
+        "Transportation of goods for job work (inputs or capital goods sent to job worker)",
+        "Transportation of goods for reasons other than by way of supply (e.g., exhibition, loan, lease without transfer of title)",
+        "Transportation of goods in semi-knocked down (SKD) or completely knocked down (CKD) condition or in batches/lots",
+        "Other supplies as notified by the Board"
+      ],
+      "mandatory_fields": [
+        "Date and number of delivery challan",
+        "Name, address and GSTIN of consigner",
+        "Name, address and GSTIN/UIN of consignee (if registered)",
+        "HSN code, description, quantity and unit of goods",
+        "Taxable value",
+        "Tax rate and amount (CGST, SGST, IGST, UTGST, Cess) — if taxable",
+        "Place of supply with State name (for inter-State movement)",
+        "Signature or digital signature"
+      ],
+      "delivery_challan_copies": ["ORIGINAL FOR CONSIGNEE", "DUPLICATE FOR TRANSPORTER", "TRIPLICATE FOR CONSIGNER"],
+      "key_conditions": [
+        "E-way bill to be generated on the basis of delivery challan if consignment value exceeds Rs. 50,000",
+        "Invoice to be issued after completion of supply/job work",
+        "For job work inputs: must return within 1 year; for capital goods: within 3 years"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["delivery challan", "job work", "liquid gas", "exhibition", "CKD", "SKD", "batches", "e-way bill", "Rule 55"]
+    },
+    {
+      "rule_id": "GST-INV-019",
+      "rule_code": "CGST Rule 55A",
+      "title": "Tax Invoice or Bill of Supply to Accompany Transport of Goods",
+      "category": "Document for Movement of Goods",
+      "description": "The person in charge of the conveyance must carry a copy of the tax invoice or bill of supply where an e-way bill is not required.",
+      "conditions": [
+        "Applies where the transporter/person-in-charge is not required to carry an e-way bill",
+        "Must carry a copy of: Tax Invoice (Rule 46), Invoice-cum-Bill of Supply (Rule 46A), or Bill of Supply (Rule 49)",
+        "Ensures traceability of goods in transit"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["conveyance", "transport document", "no e-way bill", "tax invoice copy", "Rule 55A"]
+    },
+    {
+      "rule_id": "GST-INV-020",
+      "rule_code": "CGST Act Section 31 + Rule 46 — Export Invoice",
+      "title": "Invoice for Export of Goods or Services",
+      "category": "Export Invoice",
+      "description": "Invoices for export supplies (zero-rated supplies) must contain additional mandatory fields and endorsements.",
+      "mandatory_fields_exports": [
+        "All standard fields under Rule 46",
+        "Endorsement: 'SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS ON PAYMENT OF INTEGRATED TAX' — for exports with IGST payment",
+        "Endorsement: 'SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER BOND OR LETTER OF UNDERTAKING WITHOUT PAYMENT OF INTEGRATED TAX' — for exports without IGST (LUT/Bond)",
+        "Name and address of recipient outside India",
+        "Country of destination",
+        "Shipping bill details (may be added later)",
+        "Port code (for e-invoice purpose)"
+      ],
+      "key_conditions": [
+        "IGST-exempt exports (under LUT/Bond): IGST rate shown as 0 or nil; endorsement must state 'without payment of IGST'",
+        "IGST-paid exports: IGST charged at applicable rate; refund may be claimed",
+        "Export invoices in foreign currency: both foreign currency amount and INR equivalent must be shown",
+        "Invoice serial number may be in a separate series for exports (e.g., EXP/2024-25/001)"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["export invoice", "zero-rated", "LUT", "bond", "IGST", "shipping bill", "Rule 46", "endorsement"]
+    },
+    {
+      "rule_id": "GST-INV-021",
+      "rule_code": "CGST Act Section 31 + Rule 46 — SEZ Invoice",
+      "title": "Invoice for Supplies to SEZ Units or SEZ Developers",
+      "category": "SEZ Supply Invoice",
+      "description": "Supplies to Special Economic Zone (SEZ) units or developers are zero-rated supplies and invoices must carry the appropriate endorsement.",
+      "conditions": [
+        "Supply to SEZ unit or developer for authorised operations: treated as zero-rated supply under Section 16 of IGST Act",
+        "Invoice must carry endorsement: 'SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS'",
+        "Supplier may supply under bond/LUT (without IGST) or with IGST (and claim refund)",
+        "SEZ unit's certificate of operation and list of authorised operations should be on file with supplier",
+        "GSTIN of SEZ unit is a mandatory field on invoice"
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["SEZ", "Special Economic Zone", "zero-rated", "authorised operations", "IGST exemption", "Rule 46"]
+    },
+    {
+      "rule_id": "GST-INV-022",
+      "rule_code": "CGST Rule 46 — Penalty Matrix",
+      "title": "Penalties for Non-Compliant Invoices",
+      "category": "Penalties",
+      "description": "Penalties and consequences for non-compliant invoices under the CGST Act.",
+      "penalty_provisions": [
+        {
+          "section": "Section 122(1)",
+          "offence": "Supplying goods/services without issuing invoice, or issuing incorrect/false invoice",
+          "penalty": "Rs. 10,000 or amount of tax evaded, whichever is higher — per invoice"
+        },
+        {
+          "section": "Section 122(1)(ii)",
+          "offence": "Issuing invoice/document in violation of Act/Rules",
+          "penalty": "Rs. 10,000 per document"
+        },
+        {
+          "section": "Section 122(1)(viii)",
+          "offence": "Incorrectly claiming ITC using false/fraudulent invoice",
+          "penalty": "Rs. 10,000 or tax evaded/ITC wrongly claimed, whichever is higher"
+        },
+        {
+          "section": "Section 132(1)(b)/(c)",
+          "offence": "Issuing invoice without actual supply OR fraudulently availing ITC using such invoice — if exceeds Rs. 5 Crore",
+          "penalty": "Imprisonment up to 5 years with fine; non-bailable"
+        },
+        {
+          "section": "Rule 48(5)",
+          "offence": "Invoice issued without valid IRN by a notified e-invoice taxpayer",
+          "penalty": "Invoice treated as invalid; recipient loses ITC; penalty under Section 122"
+        }
+      ],
+      "effective_date": "01-07-2017",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["penalty", "Section 122", "Section 132", "imprisonment", "ITC denial", "fraudulent invoice", "invalid invoice"]
+    }
+  ]
+}

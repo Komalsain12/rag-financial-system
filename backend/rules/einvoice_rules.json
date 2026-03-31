@@ -1,0 +1,609 @@
+{
+  "_metadata": {
+    "dataset_name": "E-Invoice Rules (GST) — Comprehensive",
+    "source_authority": "Central Board of Indirect Taxes and Customs (CBIC) & GSTN",
+    "governing_rules": [
+      "CGST Rule 48(4), (5), (6) — Manner of Issuing Invoice",
+      "Notification No. 13/2020-Central Tax dated 21-03-2020 (Phase 1 launch)",
+      "Notification No. 01/2022-Central Tax dated 24-02-2022 (Rs. 20 Cr threshold)",
+      "Notification No. 17/2022-Central Tax (Rs. 10 Cr threshold)",
+      "Notification No. 10/2023-Central Tax dated 26-05-2023 (Rs. 5 Cr threshold, effective 01-08-2023)",
+      "GSTN Advisory dated 05-11-2024 (30-day IRP reporting limit, effective 01-04-2025)",
+      "CBIC Circular 211/5/2024-GST dated 26-06-2024 (QR Code clarifications)",
+      "Notification No. 23/2021-Central Tax (Government department exemption)",
+      "ICAI Handbook on Invoicing under GST, June 2025 edition"
+    ],
+    "official_url": "https://einvoice1.gst.gov.in; https://cbic-gst.gov.in; https://www.gstn.org.in",
+    "last_updated": "GSTN Advisory 05-11-2024 (effective 01-04-2025)",
+    "version": "2.0",
+    "schema_version": "1.0",
+    "total_rules": 22,
+    "tags": ["GST", "e-invoice", "IRN", "IRP", "CBIC", "India", "GSTN", "Rule 48"]
+  },
+  "rules": [
+    {
+      "rule_id": "EINV-001",
+      "rule_code": "CGST Rule 48(4)",
+      "title": "E-Invoice Mandate — Applicability and Threshold",
+      "category": "Applicability",
+      "description": "Registered persons whose Aggregate Annual Turnover (AATO) in any preceding financial year from 2017-18 onwards exceeds the notified threshold must prepare invoices by uploading to the Invoice Registration Portal (IRP) and obtaining an IRN.",
+      "current_threshold": {
+        "threshold_crore": 5,
+        "effective_date": "01-08-2023",
+        "notification": "Notification No. 10/2023-Central Tax dated 26-05-2023"
+      },
+      "phase_rollout": [
+        {"phase": 1, "threshold_crore": 500, "effective_date": "01-10-2020", "notification": "13/2020-CT dated 21-03-2020"},
+        {"phase": 2, "threshold_crore": 100, "effective_date": "01-01-2021", "notification": "Amendment to 13/2020-CT"},
+        {"phase": 3, "threshold_crore": 50, "effective_date": "01-04-2021", "notification": "Amendment to 13/2020-CT"},
+        {"phase": 4, "threshold_crore": 20, "effective_date": "01-04-2022", "notification": "01/2022-CT dated 24-02-2022"},
+        {"phase": 5, "threshold_crore": 10, "effective_date": "01-10-2022", "notification": "17/2022-CT"},
+        {"phase": 6, "threshold_crore": 5, "effective_date": "01-08-2023", "notification": "10/2023-CT dated 26-05-2023"}
+      ],
+      "aato_basis": "AATO is computed on PAN-basis — aggregate turnover of ALL GSTINs under a single PAN across all States/UTs in India in any preceding financial year from 2017-18",
+      "perpetual_application": "Once a taxpayer's AATO exceeds the threshold in any preceding year, e-invoicing applies in all subsequent years even if AATO later falls below the threshold",
+      "applicable_transactions": [
+        "B2B supplies (taxable and zero-rated)",
+        "B2G supplies (supplies to government entities)",
+        "Exports of goods and services",
+        "Supplies to SEZ units/developers",
+        "Deemed exports",
+        "Credit notes and debit notes issued by notified persons against B2B/export invoices"
+      ],
+      "not_applicable_transactions": [
+        "B2C supplies (supplies to unregistered persons)",
+        "Import transactions",
+        "Nil-rated or fully exempt supplies (no tax invoice required)",
+        "Bill of supply (exempt/composition)",
+        "Delivery challans",
+        "Receipt vouchers, payment vouchers, refund vouchers"
+      ],
+      "effective_date": "01-10-2020",
+      "last_amended": "01-08-2023",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["e-invoice applicability", "AATO", "5 crore threshold", "PAN-basis", "B2B", "B2G", "exports", "Rule 48(4)", "perpetual"]
+    },
+    {
+      "rule_id": "EINV-002",
+      "rule_code": "CGST Rule 48(5)",
+      "title": "Invalid Invoice Without IRN from Notified Taxpayer",
+      "category": "Invoice Validity",
+      "description": "An invoice issued by a notified person (to whom Rule 48(4) applies) in any manner other than uploading to IRP and obtaining an IRN is NOT treated as a valid invoice under Rule 48(5).",
+      "consequences": [
+        "Invoice without valid IRN is legally invalid under CGST Rules",
+        "Recipient CANNOT claim ITC on an invoice without valid IRN from a notified supplier",
+        "Goods transported on the basis of such invoice may be detained (e-way bill cannot be generated without IRN for notified persons)",
+        "Supplier is liable to penalty under Section 122 of CGST Act",
+        "Commissioner may direct the registrant to generate IRN retrospectively only under specific circumstances"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["invalid invoice", "no IRN", "Rule 48(5)", "ITC denial", "penalty", "notified person"]
+    },
+    {
+      "rule_id": "EINV-003",
+      "rule_code": "CGST Rule 48(6)",
+      "title": "Entities Exempt from E-Invoice Requirement",
+      "category": "Exemptions",
+      "description": "Certain categories of registered persons are exempt from the e-invoice mandate even where their AATO exceeds the threshold.",
+      "exempt_categories": [
+        {"entity": "Banking companies", "basis": "Notification 13/2020-CT"},
+        {"entity": "Financial institutions (including NBFCs)", "basis": "Notification 13/2020-CT"},
+        {"entity": "Insurance companies", "basis": "Notification 13/2020-CT"},
+        {"entity": "Goods Transport Agencies (GTAs)", "basis": "Notification 13/2020-CT"},
+        {"entity": "Passenger transport service providers", "basis": "Notification 13/2020-CT"},
+        {"entity": "Suppliers of services by way of admission to cinematograph films on multiplex screens", "basis": "Notification 13/2020-CT"},
+        {"entity": "SEZ Units (not SEZ Developers)", "basis": "Notification 13/2020-CT — SEZ Developers are NOT exempt"},
+        {"entity": "Government departments and local authorities", "basis": "Notification No. 23/2021-CT"},
+        {"entity": "OIDAR service providers (registered under Rule 14)", "basis": "Notification 13/2020-CT"}
+      ],
+      "important_note": "Exemption is entity-wide — an exempt entity does not generate e-invoices for any of its supplies. The declaration under Rule 46(r) must appear on invoices issued by such taxpayers where their AATO exceeds the notified threshold.",
+      "effective_date": "21-03-2020",
+      "amendment_ref": "Notification No. 23/2021-CT; Notification No. 01/2022-CT",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["e-invoice exemption", "banking", "NBFC", "GTA", "SEZ unit", "government", "OIDAR", "Rule 48(6)", "multiplex", "insurance"]
+    },
+    {
+      "rule_id": "EINV-004",
+      "rule_code": "GSTN Advisory 05-11-2024",
+      "title": "30-Day Time Limit for Reporting E-Invoices on IRP",
+      "category": "IRP Reporting Timeliness",
+      "description": "As per GSTN Advisory dated 05-11-2024 (effective 01-04-2025), taxpayers with AATO of Rs. 10 crore and above must report e-invoices on the IRP within 30 days from the invoice date.",
+      "conditions": [
+        "Applies to: taxpayers with AATO >= Rs. 10 Crore — effective 01-04-2025",
+        "The 30-day limit applies to: Tax Invoices and Credit/Debit Notes reported under e-invoicing",
+        "The IRP portal will reject invoice uploads beyond the 30-day window",
+        "Invoices rejected by IRP for being late are non-compliant; ITC not available to recipient",
+        "Previous (01-11-2023 to 31-03-2025): 30-day limit applied to AATO >= Rs. 100 Crore",
+        "For AATO between Rs. 5 Crore and Rs. 10 Crore: no defined time limit under current advisory (as of March 2026)",
+        "Correction mechanism: if invoice missed the window, taxpayer must report it as an amendment in GSTR-1 (cannot obtain IRN for such invoices)"
+      ],
+      "applicable_to": "Registered taxpayers with AATO >= Rs. 10 Crore (from 01-04-2025)",
+      "effective_date": "01-04-2025",
+      "amendment_ref": "GSTN Advisory dated 05-11-2024; earlier circular for Rs. 100 Crore threshold dated 06-09-2023",
+      "official_source": "https://www.gstn.org.in",
+      "tags": ["30-day limit", "IRP reporting", "e-invoice timeliness", "GSTN advisory", "AATO 10 crore", "IRP rejection"]
+    },
+    {
+      "rule_id": "EINV-005",
+      "rule_code": "FORM GST INV-01 — Part A",
+      "title": "E-Invoice Schema — Document Details (Mandatory)",
+      "category": "E-Invoice Schema — Document Level",
+      "description": "The mandatory document-level fields in FORM GST INV-01 JSON schema for reporting to IRP.",
+      "mandatory_document_fields": [
+        {
+          "field_name": "Version",
+          "json_key": "Version",
+          "description": "Schema version number (current: 1.1)"
+        },
+        {
+          "field_name": "Transaction Details",
+          "fields": [
+            "SupTyp (Supply Type): B2B, B2C, SEZWP (SEZ with payment), SEZWOP (SEZ without payment), EXPWP (Export with payment), EXPWOP (Export without payment), DEXP (Deemed Export)",
+            "RegRev (Is Reverse Charge Applicable?): Y/N",
+            "EcmGstin (E-Commerce Operator GSTIN — if applicable)"
+          ]
+        },
+        {
+          "field_name": "Document Details",
+          "fields": [
+            "Typ (Document Type): INV (Invoice), CRN (Credit Note), DBN (Debit Note)",
+            "No (Document Number: max 16 characters per Rule 46)",
+            "Dt (Document Date: DD/MM/YYYY)"
+          ]
+        }
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["FORM GST INV-01", "schema", "document type", "INV", "CRN", "DBN", "supply type", "B2B", "export", "SEZ", "Version"]
+    },
+    {
+      "rule_id": "EINV-006",
+      "rule_code": "FORM GST INV-01 — Part B",
+      "title": "E-Invoice Schema — Seller and Buyer Details (Mandatory)",
+      "category": "E-Invoice Schema — Party Details",
+      "description": "Mandatory party-level details in the e-invoice JSON schema.",
+      "seller_mandatory_fields": [
+        "GSTIN (Seller's GSTIN — 15-digit, must be active and valid)",
+        "LglNm (Legal Name of Seller — max 100 characters)",
+        "Addr1 (Address Line 1 — max 100 characters)",
+        "Loc (City/Town/Village — max 50 characters)",
+        "Pin (PIN Code — 6-digit numeric)",
+        "Stcd (State Code — 2-digit code per GST state code list)"
+      ],
+      "buyer_mandatory_fields": [
+        "GSTIN (Buyer's GSTIN — mandatory for B2B; 'URP' for unregistered; 'NA' for export)",
+        "LglNm (Legal Name of Buyer — max 100 characters)",
+        "Pos (Place of Supply State Code — 2-digit)",
+        "Addr1 (Address Line 1)",
+        "Loc (City/Town/Village)",
+        "Pin (PIN Code — 999999 for foreign country/export)",
+        "Stcd (State Code)"
+      ],
+      "optional_party_fields": [
+        "TrdNm (Trade Name of Seller/Buyer)",
+        "Addr2 (Address Line 2)",
+        "Ph (Phone)",
+        "Em (Email)"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["e-invoice schema", "seller details", "buyer GSTIN", "URP", "place of supply", "state code", "PIN code", "FORM GST INV-01"]
+    },
+    {
+      "rule_id": "EINV-007",
+      "rule_code": "FORM GST INV-01 — Part C",
+      "title": "E-Invoice Schema — Line Item Details (Mandatory)",
+      "category": "E-Invoice Schema — Line Items",
+      "description": "Mandatory line-item level details in the e-invoice JSON schema. At least one line item is mandatory.",
+      "mandatory_item_fields": [
+        "SlNo (Serial Number of Item: 1, 2, 3...)",
+        "PrdDesc (Product/Service Description — max 300 characters)",
+        "IsServc (Is it a Service? Y/N)",
+        "HsnCd (HSN/SAC Code — mandatory, minimum digits as per notification based on AATO)",
+        "Qty (Quantity — numeric with 3 decimal places; optional for services)",
+        "Unit (Unit Code — from list: NOS, KGS, MTR, LTR etc.; NA for services)",
+        "UnitPrice (Unit Price before discount — up to 18 decimal places)",
+        "TotAmt (Gross Amount = Qty × Unit Price)",
+        "Discount (Discount if any — numeric)",
+        "AssAmt (Assessable Value = TotAmt - Discount — must be > 0)",
+        "GstRt (GST Rate — 0, 0.1, 0.25, 1.5, 3, 5, 7.5, 12, 18, 28)",
+        "IgstAmt OR (CgstAmt + SgstAmt) — one must be populated based on supply type",
+        "CesRt and CesAmt (if applicable)",
+        "TotItemVal (Total Item Value = AssAmt + IgstAmt or CgstAmt + SgstAmt + CesAmt)"
+      ],
+      "totitemval_note": "From 01-02-2026: TotItemVal validation relaxed for RSP-based calculations — items sold at MRP/RSP may have minor discrepancies in TotItemVal due to rounding. Per Notification No. 20/2025-CT dated 31-12-2025.",
+      "optional_item_fields": [
+        "Batch details (NoBatch, ExpDt, WrDt)",
+        "Attribute1, Attribute2 (free text product attribute)",
+        "OrgCntry (Country of Origin for imports)"
+      ],
+      "effective_date": "01-10-2020",
+      "last_amended": "01-02-2026",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["e-invoice line items", "HSN code", "assessable value", "GST rate", "IGST", "CGST", "SGST", "Cess", "TotItemVal", "RSP relaxation", "FORM GST INV-01"]
+    },
+    {
+      "rule_id": "EINV-008",
+      "rule_code": "FORM GST INV-01 — Part D",
+      "title": "E-Invoice Schema — Invoice Value Details (Mandatory)",
+      "category": "E-Invoice Schema — Invoice Totals",
+      "description": "Mandatory invoice-level total value details in the e-invoice JSON schema.",
+      "mandatory_value_fields": [
+        "AssVal (Total Assessable Value — sum of all line item AssAmt)",
+        "IgstAmt (Total IGST Amount — for inter-State or export transactions)",
+        "CgstAmt (Total CGST Amount — for intra-State transactions)",
+        "SgstAmt (Total SGST/UTGST Amount — for intra-State transactions)",
+        "CesAmt (Total Cess Amount — if applicable)",
+        "CesNonAdvolAmt (Cess on specific items not calculated as percentage, if applicable)",
+        "StCesAmt (State Cess — if applicable in some states)",
+        "RndOffAmt (Round Off Amount — for balancing)",
+        "TotInvVal (Total Invoice Value = AssVal + IgstAmt or CgstAmt + SgstAmt + CesAmt - Discount + RndOffAmt)"
+      ],
+      "validation": "IRP validates that TotInvVal matches the sum of all component amounts within prescribed tolerance",
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["invoice totals", "TotInvVal", "AssVal", "IGST total", "CGST total", "SGST total", "Cess", "rounding", "FORM GST INV-01"]
+    },
+    {
+      "rule_id": "EINV-009",
+      "rule_code": "FORM GST INV-01 — Part E",
+      "title": "E-Invoice Schema — Optional Sections",
+      "category": "E-Invoice Schema — Optional Fields",
+      "description": "Optional sections in the e-invoice JSON schema that may be required for specific transaction types.",
+      "optional_sections": [
+        {
+          "section": "Payment Details",
+          "fields": ["PayTerm (Payment Terms)", "PayInstr (Payment Instruction)", "CrTrn (Credit Transfer)", "DirDr (Direct Debit)", "CrDay (Credit Days)", "PaidAmt (Amount already paid)", "PaymtDue (Outstanding amount)", "BankAccDtls (Bank Account details)"],
+          "when_needed": "When payment terms need to be communicated to recipient"
+        },
+        {
+          "section": "Reference Details",
+          "fields": ["InvRm (Invoice Remarks — max 100 chars)", "DocPerdDtls (Document Period — from and to dates)", "PrecDocDtls (Preceding document reference — for credit/debit notes: original invoice number and date)"],
+          "when_needed": "Credit notes and debit notes MUST include PrecDocDtls with original invoice number and date"
+        },
+        {
+          "section": "Export Details",
+          "fields": ["ShpBillNo (Shipping Bill Number)", "ShpBillDt (Shipping Bill Date)", "Port (Port Code from ICEGATE)", "RefClm (Refund Claim: Y/N)", "ForCur (Foreign Currency Code)", "CntCode (Country Code of Destination)", "ExpDutyAmt (Export Duty Amount if applicable)"],
+          "when_needed": "For all export transactions (EXPWP or EXPWOP supply type)"
+        },
+        {
+          "section": "E-Way Bill Details",
+          "fields": ["TransId (Transporter GSTIN/Enrollment ID)", "TransName (Transporter Name)", "TransMode (Mode: 1=Road, 2=Rail, 3=Air, 4=Ship)", "Distance (Distance in KM)", "TransDocNo (Transport Document Number)", "TransDocDt (Transport Document Date)", "VehNo (Vehicle Number)", "VehType (Vehicle Type: R=Regular, O=ODC)"],
+          "when_needed": "Can be included in e-invoice for automatic e-way bill generation. E-way bill auto-generated on IRP if TransId or VehNo is provided and consignment value exceeds Rs. 50,000"
+        }
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["optional fields", "export details", "e-way bill integration", "shipping bill", "port code", "credit note reference", "payment details", "FORM GST INV-01"]
+    },
+    {
+      "rule_id": "EINV-010",
+      "rule_code": "CBIC Circular — IRN Generation Process",
+      "title": "IRN Generation — Technical Process and Hash Algorithm",
+      "category": "IRN Technical Details",
+      "description": "The Invoice Reference Number (IRN) is a unique 64-character alphanumeric reference generated by the IRP using the SHA-256 hash algorithm.",
+      "irn_generation": {
+        "algorithm": "SHA-256 cryptographic hash",
+        "input_parameters": [
+          "Supplier GSTIN",
+          "Document Number (Invoice/Credit/Debit Note number — exactly as on invoice)",
+          "Financial Year in YYYY-YY format (e.g., 2024-25)",
+          "Document Type: INV, CRN, or DBN"
+        ],
+        "output": "64-character alphanumeric hash — unique for each combination of the 4 inputs above",
+        "uniqueness_guarantee": "Same supplier GSTIN + document number + FY + document type combination cannot generate a second IRN — duplicate IRN generation is blocked by IRP"
+      },
+      "irn_validity": "An IRN is valid permanently — there is no expiry on an issued IRN. However, a cancelled IRN cannot be used for any purpose.",
+      "irp_response": "IRP returns: signed JSON (with IRP digital signature), IRN, QR code, acknowledgement number, and acknowledgement date",
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["IRN", "SHA-256", "hash", "64 characters", "IRP response", "acknowledgement", "GSTIN", "financial year", "document number"]
+    },
+    {
+      "rule_id": "EINV-011",
+      "rule_code": "CBIC Rule 46(q) + Circular 211/5/2024",
+      "title": "QR Code on E-Invoice — Mandatory Content",
+      "category": "QR Code Requirements",
+      "description": "The QR code embedded in e-invoices (generated by IRP) must contain at minimum the following information. QR codes for B2C invoices are different (seller-generated, not IRP-generated).",
+      "qr_code_content_b2b_einvoice": [
+        "Supplier GSTIN",
+        "Recipient GSTIN",
+        "Invoice number",
+        "Invoice date",
+        "Invoice value (total invoice value)",
+        "Number of line items",
+        "Main HSN code (HSN code of the item with highest value)",
+        "IRN (64-character hash)",
+        "IRN generation date and time"
+      ],
+      "qr_code_b2c_rule": {
+        "applicability": "Suppliers with AATO > Rs. 500 Crore must have a dynamic QR code on B2C invoices (not through IRP) — per Notification No. 14/2020-CT and related circulars",
+        "content": "UPI link or payment QR code enabling recipient to make payment",
+        "exemption": "Insurance companies, banking companies, NBFCs, GTA, passenger transport — exempt from B2C QR code requirement"
+      },
+      "verification": "Recipients can verify the IRN and QR code at https://einvoice1.gst.gov.in/Others/verifysignedeinvoice",
+      "effective_date": "01-10-2020",
+      "last_amended": "Circular 211/5/2024-GST dated 26-06-2024",
+      "official_source": "https://einvoice1.gst.gov.in; https://cbic-gst.gov.in",
+      "tags": ["QR code", "e-invoice QR", "B2B QR", "B2C QR", "IRN", "UPI", "Rule 46(q)", "verification", "Circular 211"]
+    },
+    {
+      "rule_id": "EINV-012",
+      "rule_code": "CBIC Rule 48(4) — IRP Validation Rules",
+      "title": "IRP Validation Checks Before Issuing IRN",
+      "category": "IRP Validation",
+      "description": "The Invoice Registration Portal performs the following validation checks before issuing an IRN.",
+      "validation_checks": [
+        {
+          "check": "Supplier GSTIN validation",
+          "rule": "Supplier GSTIN must be valid, active, and not cancelled. GSTIN must match the logged-in taxpayer's GSTIN."
+        },
+        {
+          "check": "Buyer GSTIN validation",
+          "rule": "Buyer GSTIN must be valid and active for B2B transactions. For export: 'NA' is accepted. For unregistered: 'URP' is accepted."
+        },
+        {
+          "check": "Duplicate IRN check",
+          "rule": "Same combination of Supplier GSTIN + Invoice Number + Financial Year + Document Type cannot be submitted twice. IRP will reject with 'IRN already generated' error."
+        },
+        {
+          "check": "Invoice date validation",
+          "rule": "Invoice date cannot be before the e-invoice applicability date for that taxpayer. Invoice date cannot be future-dated. Invoice date must be within current or immediately preceding financial year for IRN generation."
+        },
+        {
+          "check": "30-day time limit (from 01-04-2025)",
+          "rule": "For taxpayers with AATO >= Rs. 10 Crore: invoice date cannot be more than 30 days before date of IRP upload. IRP rejects invoices older than 30 days."
+        },
+        {
+          "check": "HSN code validation",
+          "rule": "HSN/SAC code must be a valid code from the GST HSN master maintained by GSTN. Invalid HSN codes will be rejected."
+        },
+        {
+          "check": "Document number format",
+          "rule": "Invoice number must not exceed 16 characters and must only contain alphanumerics, hyphens, and slashes as per Rule 46(b)."
+        },
+        {
+          "check": "Tax calculation validation",
+          "rule": "IRP validates that tax amounts (IGST or CGST+SGST) are consistent with the declared assessable value and tax rate. Discrepancies beyond tolerance trigger rejection."
+        },
+        {
+          "check": "TotItemVal validation (relaxed from 01-02-2026)",
+          "rule": "TotItemVal at line item level must match AssAmt + tax amounts. From 01-02-2026: tolerance allowed for RSP/MRP-based items under Notification No. 20/2025-CT."
+        },
+        {
+          "check": "Supply type consistency",
+          "rule": "Place of Supply state code must be consistent with supply type (inter-State = IGST applicable; intra-State = CGST+SGST applicable)."
+        },
+        {
+          "check": "Notified taxpayer check",
+          "rule": "IRP verifies that the supplier is a notified taxpayer who is required to generate e-invoices. Non-notified taxpayers cannot generate IRNs."
+        }
+      ],
+      "irp_portals": [
+        {"name": "NIC IRP 1", "url": "https://einvoice1.gst.gov.in"},
+        {"name": "GSTN IRP 2", "url": "https://einvoice2.gst.gov.in"},
+        {"name": "IRIS IRP 6", "url": "https://einvoice6.gst.gov.in"},
+        {"name": "Clear (Defmacro) IRP 4", "url": "https://einvoice4.gst.gov.in"},
+        {"name": "Cygnet IRP 5", "url": "https://einvoice5.gst.gov.in"}
+      ],
+      "effective_date": "01-10-2020",
+      "last_amended": "01-02-2026",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["IRP validation", "GSTIN validation", "duplicate check", "HSN validation", "tax calculation", "document number format", "30-day window", "supply type", "TotItemVal"]
+    },
+    {
+      "rule_id": "EINV-013",
+      "rule_code": "CBIC Rule 48(4) — Cancellation",
+      "title": "E-Invoice Cancellation — Rules and Process",
+      "category": "E-Invoice Cancellation",
+      "description": "An IRN once generated can be cancelled within 24 hours on the IRP. After 24 hours, amendment is required through GSTR-1.",
+      "cancellation_rules": [
+        "Cancellation within 24 hours of IRN generation: allowed directly on IRP portal (or through API/GSP)",
+        "Cancellation after 24 hours: not permitted on IRP. Taxpayer must file an amendment in GSTR-1 (Table 9A or 9B as applicable)",
+        "A cancelled IRN cannot be reused",
+        "After cancellation, a fresh invoice must be raised with a DIFFERENT invoice number — same invoice number cannot be reused",
+        "Partial cancellation is NOT permitted — the entire e-invoice must be cancelled",
+        "Goods already in transit on e-way bill: e-way bill must also be cancelled before the e-invoice can be cancelled",
+        "Cancellation on IRP is final — it cannot be reversed"
+      ],
+      "amendment_in_gstr1": "Where IRP-based cancellation is not possible (after 24 hours), the incorrect invoice is amended in GSTR-1. The corrected details flow to the buyer's GSTR-2B in the month the amendment is filed.",
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["IRN cancellation", "24 hours", "GSTR-1 amendment", "new invoice number", "e-way bill cancellation", "no reversal of cancellation", "partial cancellation not allowed"]
+    },
+    {
+      "rule_id": "EINV-014",
+      "rule_code": "CBIC Rule 48(4) — E-Invoice for Credit/Debit Notes",
+      "title": "E-Invoice Requirement for Credit Notes and Debit Notes",
+      "category": "CDN E-Invoicing",
+      "description": "Notified taxpayers must generate IRN for Credit Notes (CRN) and Debit Notes (DBN) issued against B2B/export invoices, just as they do for invoices.",
+      "conditions": [
+        "CDNs (Credit Notes and Debit Notes) issued by notified taxpayers against B2B invoices must be reported to IRP",
+        "Document Type in FORM GST INV-01: CRN for Credit Notes; DBN for Debit Notes",
+        "Original invoice reference (PrecDocDtls) is mandatory in the e-CDN",
+        "IRN is generated for each CDN just as for invoices",
+        "Same 30-day reporting window applies for CDNs (for AATO >= Rs. 10 Crore from 01-04-2025)",
+        "CDNs issued for B2C transactions do not require IRN",
+        "CDNs for exempt supplies or bill-of-supply transactions do not require IRN"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["e-invoice CDN", "credit note IRN", "debit note IRN", "CRN", "DBN", "B2B CDN", "preceding document", "30-day limit CDN"]
+    },
+    {
+      "rule_id": "EINV-015",
+      "rule_code": "CBIC Rule 48(4) — Integration with GSTR-1 and E-Way Bill",
+      "title": "Auto-Population of GSTR-1 and E-Way Bill from E-Invoice",
+      "category": "E-Invoice Integration",
+      "description": "E-invoices (IRN-generated) are automatically reflected in GSTR-1 and GSTR-2B, and e-way bills can be auto-generated from the e-invoice data.",
+      "gstr1_integration": [
+        "E-invoice data is auto-populated in GSTR-1 of the supplier in the relevant table (B2B, B2CL, Export, Credit Notes, etc.)",
+        "Auto-populated data in GSTR-1 can be edited or deleted by the supplier before filing",
+        "Buyer receives auto-populated data in their GSTR-2B based on the supplier's e-invoice/GSTR-1 data",
+        "E-invoices uploaded after GSTR-1 filing date for that month flow into the next month's GSTR-1"
+      ],
+      "eway_bill_integration": [
+        "When transporter details (TransId or VehNo and Distance) are included in the e-invoice JSON, IRP automatically generates an e-way bill",
+          "No separate e-way bill generation required on NIC e-way bill portal if auto-generated through e-invoice",
+        "E-way bill number (EwbNo) is returned along with the IRN in the IRP response",
+        "If transport details are NOT included in e-invoice: e-way bill must be separately generated on NIC e-way bill portal (ewaybillgst.gov.in) using the IRN"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in; https://gstcouncil.gov.in",
+      "tags": ["GSTR-1 auto-population", "GSTR-2B", "e-way bill", "auto-generated", "IRN integration", "transporter details", "EwbNo"]
+    },
+    {
+      "rule_id": "EINV-016",
+      "rule_code": "CBIC — E-Invoice Applicability to Self-Invoice (RCM)",
+      "title": "Self-Invoices Under RCM — Not Covered by E-Invoice Mandate",
+      "category": "E-Invoice Scope Clarification",
+      "description": "Self-invoices issued by recipients under the Reverse Charge Mechanism (Section 31(3)(f) read with Rule 47A) are NOT required to have an IRN.",
+      "conditions": [
+        "Self-invoices issued by registered recipients for purchases from unregistered suppliers under RCM (Section 9(3) or 9(4)) do NOT require an IRN from IRP",
+        "The e-invoice mandate under Rule 48(4) applies to invoices issued by the SUPPLIER — not to self-invoices issued by the recipient",
+        "Self-invoices follow the format of Rule 46 but are not uploaded to IRP",
+        "This is clarified in FAQs published on einvoice1.gst.gov.in"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["self-invoice", "RCM", "reverse charge", "no IRN required", "Section 9(3)", "Section 9(4)", "Rule 47A", "e-invoice scope"]
+    },
+    {
+      "rule_id": "EINV-017",
+      "rule_code": "CBIC — B2C QR Code Obligation",
+      "title": "QR Code on B2C Invoices — Separate Obligation for Large Taxpayers",
+      "category": "B2C QR Code",
+      "description": "Suppliers with AATO > Rs. 500 Crore must display a dynamic QR code on B2C invoices enabling payment to the supplier. This is separate from the IRP-generated e-invoice QR code.",
+      "conditions": [
+        "Applicability: AATO > Rs. 500 Crore — per Notification No. 14/2020-CT dated 21-03-2020",
+        "Effective date: 01-12-2020 (with various compliance relaxations initially)",
+        "QR code must encode a link to the UPI or any other payment mode approved by RBI",
+        "QR code must be 'dynamic' — unique per transaction, encoding at minimum: payee VPA (UPI ID), payee name, amount, invoice reference",
+        "Applicable even to B2C invoices that do not require IRP-generated IRN",
+        "Exemptions from B2C QR code: banking companies, insurance companies, NBFCs, GTA, passenger transport, multiplex — same entities exempt from e-invoicing"
+      ],
+      "effective_date": "01-12-2020",
+      "amendment_ref": "Notification No. 14/2020-CT; Circular 156/12/2021-GST",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["B2C QR code", "dynamic QR", "UPI", "Rs. 500 crore", "payment QR", "Notification 14/2020", "Circular 156", "AATO 500 crore"]
+    },
+    {
+      "rule_id": "EINV-018",
+      "rule_code": "CBIC — E-Invoice for SEZ Supplies",
+      "title": "E-Invoice for Supplies to SEZ Units and SEZ Developers",
+      "category": "SEZ E-Invoicing",
+      "description": "Supplies to SEZ units or SEZ developers for authorised operations are covered under the e-invoice mandate for notified taxpayers.",
+      "conditions": [
+        "Notified taxpayers must generate IRN for supplies to SEZ units (supply type: SEZWP or SEZWOP)",
+        "SEZWP = SEZ with payment of IGST; SEZWOP = SEZ without payment of IGST (under LUT/Bond)",
+        "SEZ Developers: not exempt from e-invoicing — they must generate IRN for their supplies",
+        "SEZ Units: ARE exempt from e-invoicing for their own supplies to DTA/other buyers",
+        "GSTIN of the SEZ unit (buyer) is mandatory in the e-invoice",
+        "IRN and QR code must be printed on the physical/electronic invoice sent to SEZ unit"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["SEZ", "SEZWP", "SEZWOP", "SEZ unit", "SEZ developer", "e-invoice SEZ", "IGST", "LUT", "Rule 48(4)"]
+    },
+    {
+      "rule_id": "EINV-019",
+      "rule_code": "CBIC — Retention of E-Invoice Records",
+      "title": "Record Retention for E-Invoices",
+      "category": "E-Invoice Retention",
+      "description": "E-invoice data and IRN details must be retained for the period prescribed under Section 36 of CGST Act and Companies Act 2013.",
+      "conditions": [
+        "E-invoice signed JSON (IRP-signed response) must be retained — not just the PDF printout",
+        "Retention period: 72 months (6 years) from due date of Annual Return under Section 36; for companies: 8 years under Companies Act 2013 Section 128(5) — whichever is longer",
+        "IRP does not permanently store e-invoices — taxpayer is responsible for their own retention",
+        "IRP retains e-invoice data for only 24 hours (after which cancellation is not possible on IRP, and invoice data is no longer retrievable from IRP directly)",
+        "Taxpayer ERP/billing system must store the complete IRN, signed JSON, and QR code image",
+        "On audit or investigation: taxpayer must produce the IRP-signed JSON as evidence of valid e-invoice"
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in; https://cbic-gst.gov.in",
+      "tags": ["e-invoice retention", "signed JSON", "IRN retention", "24 hours IRP storage", "Section 36", "Companies Act", "audit evidence", "6 years", "8 years"]
+    },
+    {
+      "rule_id": "EINV-020",
+      "rule_code": "CBIC — E-Invoice API Integration",
+      "title": "E-Invoice API — Integration Methods for Taxpayers",
+      "category": "E-Invoice Technical Integration",
+      "description": "Taxpayers can generate e-invoices through multiple channels: direct API integration, through GSPs, offline tools, or the government-provided web portal.",
+      "integration_channels": [
+        {
+          "method": "API Integration (direct or via GSP)",
+          "description": "Taxpayer ERP integrates directly with IRP API using registered API credentials. Supports high-volume batch generation. Recommended for large enterprises.",
+          "gsp": "GST Suvidha Providers (GSPs) — authorized service providers who can connect to IRP API on behalf of taxpayers"
+        },
+        {
+          "method": "Offline Excel Tool",
+          "description": "Provided by NIC — for small/medium taxpayers generating low volume of invoices. Offline data entry in Excel, bulk upload to IRP.",
+          "url": "https://einvoice1.gst.gov.in"
+        },
+        {
+          "method": "Direct Web Portal",
+          "description": "Manual entry on the IRP portal — for very low volume taxpayers. Not suitable for real-time generation.",
+          "url": "https://einvoice1.gst.gov.in"
+        },
+        {
+          "method": "SMS-based generation",
+          "description": "For smallest taxpayers — not widely adopted"
+        }
+      ],
+      "api_authentication": "API credentials issued by NIC; GSTIN-specific. ERP must send digitally signed JSON payload in FORM GST INV-01 format.",
+      "effective_date": "01-10-2020",
+      "official_source": "https://einvoice1.gst.gov.in",
+      "tags": ["e-invoice API", "GSP", "ERP integration", "offline tool", "web portal", "IRP credentials", "JSON payload", "batch upload"]
+    },
+    {
+      "rule_id": "EINV-021",
+      "rule_code": "CBIC Circular 211/5/2024-GST",
+      "title": "Clarifications on E-Invoice and QR Code — Circular 211/5/2024",
+      "category": "E-Invoice Clarifications",
+      "description": "Circular No. 211/5/2024-GST dated 26-06-2024 provides clarifications on several e-invoice and QR code related issues.",
+      "key_clarifications": [
+        "IRN can be generated on the original invoice even if it was initially not reported to IRP — within the applicable time window. After the time window, GSTR-1 amendment is the only recourse.",
+        "It is not mandatory to print the IRP-signed QR code on the physical invoice if the QR code generated from the seller's ERP system encodes the same mandatory fields including IRN. However, the IRP-signed JSON must be retained.",
+        "For invoices with multiple line items: the QR code encodes the top-level invoice details only (IRN, total value, main HSN), not individual line items",
+        "E-invoice requirement for credit notes: a credit note issued by a notified taxpayer against a B2B invoice is required to have an IRN even if the credit note brings the net taxable value to zero",
+        "E-invoice system downtime: if IRP is unavailable, invoice can be issued and IRN obtained later within the applicable time window — this is not a penalty-attracting situation"
+      ],
+      "effective_date": "26-06-2024",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["Circular 211", "e-invoice clarification", "QR code printing", "IRN retrospective", "IRP downtime", "credit note IRN", "QR code encoding"]
+    },
+    {
+      "rule_id": "EINV-022",
+      "rule_code": "CBIC — Penalties for Non-Compliance with E-Invoicing",
+      "title": "Penalties for Non-Compliance with E-Invoice Rules",
+      "category": "E-Invoice Penalties",
+      "description": "Non-compliance with e-invoice requirements leads to the following legal consequences.",
+      "penalty_provisions": [
+        {
+          "provision": "Rule 48(5) of CGST Rules",
+          "consequence": "Invoice without IRN from notified taxpayer is invalid — treated as if no invoice was issued"
+        },
+        {
+          "provision": "Section 122(1) of CGST Act",
+          "consequence": "Penalty for issuing incorrect invoice or not issuing invoice: Rs. 10,000 per invoice or tax evaded/ITC improperly claimed, whichever is higher"
+        },
+        {
+          "provision": "Section 16(2) of CGST Act (recipient ITC denial)",
+          "consequence": "Recipient's ITC denied on invoices without valid IRN from notified supplier. Recipient liable for ITC reversal with interest."
+        },
+        {
+          "provision": "E-way bill generation blocked",
+          "consequence": "From 01-04-2020: notified taxpayers cannot generate e-way bills using their own invoice reference — e-way bill must reference the IRN. If no IRN, goods cannot move with a valid e-way bill."
+        },
+        {
+          "provision": "GST audit scrutiny",
+          "consequence": "Non-generation of e-invoices may be flagged during GST audit (Section 65/66) or assessment proceedings, leading to demand of tax along with interest and penalty."
+        }
+      ],
+      "effective_date": "01-10-2020",
+      "official_source": "https://cbic-gst.gov.in",
+      "tags": ["e-invoice penalty", "Rule 48(5)", "Section 122", "ITC denial", "e-way bill blocked", "audit scrutiny", "invalid invoice consequences"]
+    }
+  ]
+}
