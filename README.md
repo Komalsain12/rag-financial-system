@@ -4,7 +4,7 @@ An AI-powered system that analyzes financial documents using
 Retrieval-Augmented Generation (RAG) to provide explainable decisions.
 
 ## Tech Stack
-- Frontend: React + Vite
+- Frontend: React
 - Backend: FastAPI (Python)
 - AI: Groq LLM + FAISS Vector Search
 - Database: PostgreSQL
